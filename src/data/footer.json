@@ -1,0 +1,19 @@
+{
+    "about": "lorem ipsum",
+    "quickLinks": [
+        {"link": "Education", "href": "#education-section"},
+        {"link": "Experience", "href": "#experience-section"},
+        {"link": "Testimonials", "href": "#testimonials-section"},
+        {"link": "Featured Projects", "href": "#featured-section"}
+    ],
+    "socialIcons": [
+        {
+            "icon": "fab fa-linkedin-in",
+            "href": "https://www.linkedin.com/in/mitchellq/"
+        },
+        {
+            "icon": "fab fa-github",
+            "href": "https://github.com/MitchellQ"
+        }
+    ]
+}
