@@ -1,3 +1,5 @@
+ import AOS from 'aos';
+  
  AOS.init({
  	duration: 800,
  	easing: 'slide',
@@ -7,12 +9,7 @@
 jQuery(document).ready(function($) {
 
 	"use strict";
-
-	
-	$(".loader").delay(1000).fadeOut("slow");
-  $("#overlayer").delay(1000).fadeOut("slow");	
-  
-
+ 
 	var siteMenuClone = function() {
 
 		$('.js-clone-nav').each(function() {
@@ -23,7 +20,7 @@ jQuery(document).ready(function($) {
 
 		setTimeout(function() {
 			
-			var counter = 0;
+		var counter = 0;
       $('.site-mobile-menu .has-children').each(function(){
         var $this = $(this);
         
@@ -323,34 +320,6 @@ jQuery(document).ready(function($) {
 
   };
   siteScroll();
-
-
-  var siteIstotope = function() {
-  	/* activate jquery isotope */
-	  var $container = $('#posts').isotope({
-	    itemSelector : '.item',
-	    isFitWidth: true
-	  });
-
-	  $(window).resize(function(){
-	    $container.isotope({
-	      columnWidth: '.col-sm-3'
-	    });
-	  });
-	  
-	  $container.isotope({ filter: '*' });
-
-	    // filter items on button click
-	  $('#filters').on( 'click', 'button', function() {
-	    var filterValue = $(this).attr('data-filter');
-	    $container.isotope({ filter: filterValue });
-	    $('#filters button').removeClass('active');
-	    $(this).addClass('active');
-	  });
-  }
-
-  siteIstotope();
-
 
   $('.fancybox').on('click', function() {
 	  var visibleLinks = $('.fancybox');

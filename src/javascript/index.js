@@ -16,7 +16,6 @@ import 'aos';
 
 import './vendor/owl.carousel.min';
 import './vendor/jquery.fancybox.min';
-import './vendor/isotope.pkgd.min';
 
 import './main';
 
@@ -24,3 +23,4 @@ import './main';
 
 /* React Javascript
  ------------------------------ */
+import './Wrapper';
