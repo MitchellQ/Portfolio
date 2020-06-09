@@ -3,7 +3,26 @@
  * @repo https://github.com/mitchellq/mitchellq.github.io
  */
 
- // Boilerplae SCSS
- @import './typography'
+/* Boilerplate Styles
+ ------------------------------ */
+@import 'bootstrap';
+// @import './vendor/jquery-ui';
+// @import './vendor/owl.carousel.min.scss';
+@import './vendor/owl.theme.default.min.scss';
+// @import './vendor/jquery.fancybox.min.scss';
+@import './vendor/bootstrap-datepicker.scss';
+@import './vendor/aos';
 
- // Component SCSS
+@import './typography';
+
+
+
+/* Theme Styles
+ ------------------------------ */
+@import "site-base";
+@import "site-navbar";
+@import "site-blocks";
+
+
+/* Component Styles
+ ------------------------------ */
