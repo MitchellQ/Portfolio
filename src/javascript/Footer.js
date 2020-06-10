@@ -18,7 +18,7 @@ export default class Footer extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <h2 className="footer-heading mb-4">About Us</h2>
+                            <h2 className="footer-heading mb-4">About</h2>
                             <p>{sanitiseHtml(about).replace(/\n/g, '</p><p>')}</p>
                         </div>
                         <div className="col-md-3 ml-auto">
@@ -32,7 +32,7 @@ export default class Footer extends React.Component {
                             </ul>
                         </div>
                         <div className="col-md-3">
-                            <h2 className="footer-heading mb-4">Find Me...</h2>
+                            <h2 className="footer-heading mb-4">Find Me</h2>
                             {
                                 socialIcons.map((i, key) => {
                                     return <SocialIcon icon={i} className={"pl-0 pr-3"} key={key} />
