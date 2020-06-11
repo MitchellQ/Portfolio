@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
                     <div className="row">
                         <div className="col-md-6">
                             <h2 className="footer-heading mb-4">About</h2>
-                            <p>{sanitiseHtml(about).replace(/\n/g, '</p><p>')}</p>
+                            <p dangerouslySetInnerHTML={{__html: sanitiseHtml(about).replace(/\n/g, '</p><p>')}} />
                         </div>
                         <div className="col-md-3 ml-auto">
                             <h2 className="footer-heading mb-4">Quick Links</h2>
