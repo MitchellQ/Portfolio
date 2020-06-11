@@ -9,7 +9,15 @@ import Footer from './Footer';
 import Contact from './Contact';
 
 export default class Wrapper extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = require('../data/siteSettings.json');
+    }
+
     render() {
+        const { testimonialsVisible, featuredProjectsVisible, contactFormVisible } = this.state;
+
         return (
             <ErrorBoundary>
                 <Spinner />
@@ -17,7 +25,7 @@ export default class Wrapper extends Component {
                 <div className="site-wrap">
                     <SiteNav />
                     <Landing />
-                    <Contact />
+                    {contactFormVisible ? <Contact /> : null};
                     <Footer />
                 </div>
             </ErrorBoundary>
