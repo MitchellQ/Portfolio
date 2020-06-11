@@ -35,7 +35,7 @@ export default class Testimonials extends React.Component {
                         </p>
                     </blockquote>
 
-                    <figure className="mb-4 d-flex align-items-center justify-content-center">
+                    {/* <figure className="mb-4 d-flex align-items-center justify-content-center">
                         <div>
                         <img
                             src="images/person_3.jpg"
@@ -44,7 +44,7 @@ export default class Testimonials extends React.Component {
                         />
                         </div>
                         <p>John Smith</p>
-                    </figure>
+                    </figure> */}
                     </div>
                 </div>
                 <div>
@@ -58,7 +58,7 @@ export default class Testimonials extends React.Component {
                         iusto.&rdquo;
                         </p>
                     </blockquote>
-                    <figure className="mb-4 d-flex align-items-center justify-content-center">
+                    {/* <figure className="mb-4 d-flex align-items-center justify-content-center">
                         <div>
                         <img
                             src="images/person_2.jpg"
@@ -67,7 +67,7 @@ export default class Testimonials extends React.Component {
                         />
                         </div>
                         <p>Christine Aguilar</p>
-                    </figure>
+                    </figure> */}
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@ export default class Testimonials extends React.Component {
                         iusto.&rdquo;
                         </p>
                     </blockquote>
-                    <figure className="mb-4 d-flex align-items-center justify-content-center">
+                    {/* <figure className="mb-4 d-flex align-items-center justify-content-center">
                         <div>
                         <img
                             src="images/person_4.jpg"
@@ -91,7 +91,7 @@ export default class Testimonials extends React.Component {
                         />
                         </div>
                         <p>Robert Spears</p>
-                    </figure>
+                    </figure> */}
                     </div>
                 </div>
 
@@ -106,7 +106,7 @@ export default class Testimonials extends React.Component {
                         iusto.&rdquo;
                         </p>
                     </blockquote>
-                    <figure className="mb-4 d-flex align-items-center justify-content-center">
+                    {/* <figure className="mb-4 d-flex align-items-center justify-content-center">
                         <div>
                         <img
                             src="images/person_4.jpg"
@@ -115,7 +115,7 @@ export default class Testimonials extends React.Component {
                         />
                         </div>
                         <p>Bruce Rogers</p>
-                    </figure>
+                    </figure> */}
                     </div>
                 </div>
                 </div>
