@@ -18,7 +18,7 @@ export default class Projects extends React.Component {
         <div className="container">
           <div className="row mb-3">
             <div className="col-12 text-center" data-aos="fade">
-              <h2 className="section-title mb-3">Portfolio</h2>
+              <h2 className="section-title mb-3">Projects</h2>
             </div>
           </div>
 
