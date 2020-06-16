@@ -31,10 +31,9 @@ export default class Wrapper extends Component {
                     <SiteNav />
                     <Landing />
                     <About />
-                    <Projects />
-                    {featuredProjectsVisible ? <FeaturedProjects /> : null};
-                    {testimonialsVisible ? <Testimonials /> : null};
-                    {contactFormVisible ? <Contact /> : null};
+                    {featuredProjectsVisible ? <FeaturedProjects /> : null}
+                    {testimonialsVisible ? <Testimonials /> : null}
+                    {contactFormVisible ? <Contact /> : null}
                     <Footer />
                 </div>
             </ErrorBoundary>
