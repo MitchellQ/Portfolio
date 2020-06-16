@@ -1,5 +1,5 @@
 {
-    "testimonialsVisible": 1,
-    "featuredProjectsVisible": 1,
-    "contactFormVisible": 1
+    "contactFormVisible": true,
+    "featuredProjectsVisible": true,
+    "testimonialsVisible": false
 }
