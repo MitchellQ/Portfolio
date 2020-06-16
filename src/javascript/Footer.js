@@ -26,7 +26,7 @@ export default class Footer extends React.Component {
                             <ul className="list-unstyled">
                                 {
                                     quickLinks.map((l, key) => {
-                                        return <li><a href={l.href} className="smoothscroll" key={key}>{l.link}</a></li>
+                                        return <li  key={key}><a href={l.href} className="smoothscroll">{l.link}</a></li>
                                     })
                                 }
                             </ul>
