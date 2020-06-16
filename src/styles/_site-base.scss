@@ -46,10 +46,6 @@ h1, h2, h3, h4, h5,
 	color: rgba($white, .5);
 }
 
-.offcanvas-menu .site-wrap {
-	// position: absolute;
-	// overflow: hidden;
-}
 body {
 	&:after {
 		transition: .3s all ease-in-out;
@@ -141,7 +137,7 @@ body {
 
 .site-footer {
 	padding: 4em 0;
-	background: lighten($black, 20%);
+	background: #262626;
 	@include media-breakpoint-up(md) {
 		padding: 8em 0;	
 	}
@@ -149,7 +145,7 @@ body {
 		border-top: 1px solid rgba(255,255,255,.1)!important;
 	}
 	p {
-		color: lighten($black, 45%); 
+		color: lighten($black, 60%); 
 	}
 	h2,h3,h4,h5 {
 		color: $white;
@@ -333,11 +329,3 @@ body {
 		width: 100%;
 	}
 }
-
-.LI-profile-badge{
-	position: fixed;
-	z-index: 100;
-	top: 30vh;
-	right: 30px;
-	display: none;
-  }
