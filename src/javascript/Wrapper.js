@@ -7,8 +7,8 @@ import Spinner from './components/Spinner';
 import SiteNav from './components/SiteNav';
 
 import About from './About';
-import Projects from './Projects';
-import FeaturedProjects from './FearturedProjects';
+import Project from './Project';
+import FeaturedProjects from './FeaturedProjects';
 import Testimonials from './Testimonials';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -25,11 +25,11 @@ export default class Wrapper extends Component {
 
         return (
             <ErrorBoundary>
-                <Spinner />
-            
+                <Spinner />            
                 <div className="site-wrap">
                     <SiteNav />
-                    <Landing />
+                    <Landing />              
+                    <Project />
                     <About />
                     {featuredProjectsVisible ? <FeaturedProjects /> : null}
                     {testimonialsVisible ? <Testimonials /> : null}
