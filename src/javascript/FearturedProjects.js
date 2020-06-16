@@ -10,25 +10,25 @@ export default class FeaturedProjects extends React.Component {
   render() {
     const { projects } = this.state;
 
-    // const images = projects.map((item, key) => {
-    //   if (item.projects.featuredProject == 1) {
-    //     return <ProjectImage path={item.projects.images[0].src} key={key} />;
-    //   }
-    // });
+    const images = projects ? projects.map((project, key) => {
+      if (project.featuredProject == true) {
+        return <ProjectImage path={project.images[0].src} key={key} />;
+      }
+    }) : null;
 
-    // const cards = projects.map((item, key) => {
-    //   if (item.projects.featuredProject == 1) {
-    //     return (
-    //       <ProjectCard
-    //         title={item.projects.title}
-    //         tagline={item.projects.tagline}
-    //         desc_1={item.projects.desc_1}
-    //         moreInfo={item.projects.moreInfo}
-    //         key={key}
-    //       />
-    //     );
-    //   }
-    // });
+    const cards = projects ? projects.map((project, key) => {
+      if (project.featuredProject == true) {
+        return (
+          <ProjectCard
+            title={project.title}
+            tagline={project.tagline}
+            desc_1={project.desc_1}
+            moreInfo={project.moreInfo}
+            key={key}
+          />
+        );
+      }
+    }) : null;
 
     return (
       <section className="site-section" id="featured-section">
@@ -51,32 +51,17 @@ export default class FeaturedProjects extends React.Component {
           <div className="row">
             <div className="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
               <div className="owl-carousel slide-one-item-alt">
-                {/* {images} */}
-                <img
-                  src="/dist/images/slide_1.jpg"
-                  alt="Image"
-                  class="img-fluid"
-                />
-                <img
-                  src="/dist/images/slide_1.jpg"
-                  alt="Image"
-                  class="img-fluid"
-                />
-                <img
-                  src="/dist/images/slide_1.jpg"
-                  alt="Image"
-                  class="img-fluid"
-                />
+                {images}
               </div>
               <div className="custom-direction">
                 <a href="#" className="custom-prev">
                   <span>
-                    <i class="far fa-long-arrow-left"></i>
+                    <i className="far fa-long-arrow-left"></i>
                   </span>
                 </a>
                 <a href="#" className="custom-next">
                   <span>
-                    <i class="far fa-long-arrow-right"></i>
+                    <i className="far fa-long-arrow-right"></i>
                   </span>
                 </a>
               </div>
@@ -87,44 +72,7 @@ export default class FeaturedProjects extends React.Component {
               data-aos-delay="100"
             >
               <div className="owl-carousel slide-one-item-alt-text">
-                {/* {cards} */}
-                <div>
-                  <h2 className="section-title mb-3">
-                    Minimal and Modern Design
-                  </h2>
-                  <p className="lead">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <p>
-                    Est qui eos quasi ratione nostrum excepturi id recusandae
-                    fugit omnis ullam pariatur itaque nisi voluptas impedit Quo
-                    suscipit omnis iste velit maxime.
-                  </p>
-
-                  <p>
-                    <a href="#" className="btn btn-primary mr-2 mb-2">
-                      Learn More
-                    </a>
-                  </p>
-                </div>{" "}
-                
-                <div>
-                  <h2 className="section-title mb-3">Do things with love</h2>
-                  <p className="lead">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <p>
-                    Est qui eos quasi ratione nostrum excepturi id recusandae
-                    fugit omnis ullam pariatur itaque nisi voluptas impedit Quo
-                    suscipit omnis iste velit maxime.
-                  </p>
-
-                  <p>
-                    <a href="#" className="btn btn-primary mr-2 mb-2">
-                      Learn More
-                    </a>
-                  </p>
-                </div>
+                {cards}
               </div>
             </div>
           </div>
