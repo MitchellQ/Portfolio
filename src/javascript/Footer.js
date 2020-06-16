@@ -34,9 +34,7 @@ export default class Footer extends React.Component {
                         <div className="col-md-3">
                             <h2 className="footer-heading mb-4">Find Me</h2>
                             {
-                                socialIcons.map((i, key) => {
-                                    return <SocialIcon icon={i} className={"pl-0 pr-3"} key={key} />
-                                })
+                               <div className="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="mitchellq"><a className="LI-simple-link" href='https://nz.linkedin.com/in/mitchellq?trk=profile-badge'>Mitchell Quarrie</a></div>
                             }
                         </div>
                     </div>
