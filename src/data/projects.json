@@ -1,14 +1,7 @@
 {
-    "categories": [
-        {"name": "All"},
-        {"name": "React"},
-        {"name": "Flutter"},
-        {"name": "Laravel"}
-    ],
     "projects": [
         {
             "title": "Portfolio Rebuild",
-            "category": "React",
             "images": [
                 {"src" : "/dist/images/about.jpg"},
                 {"src" : "/dist/images/landing.jpg"},
@@ -32,7 +25,6 @@
         },
         {
             "title": "Portfolio Rebuild",
-            "category": "React",
             "images": [
                 {"src" : "/dist/images/landing.jpg"},
                 {"src" : "/dist/images/about.jpg"},
@@ -56,7 +48,6 @@
         },
         {
             "title": "Portfolio Rebuild",
-            "category": "React",
             "images": [
                 {"src" : "/dist/images/slide_1.jpg"},
                 {"src" : "/dist/images/about.jpg"},
