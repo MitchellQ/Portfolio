@@ -14,7 +14,7 @@
                 {"src" : "/dist/images/landing.jpg"},
                 {"src" : "/dist/images/slide_1.jpg"}
             ],
-            "featuredProject": 1,
+            "featuredProject": true,
             "frameworks": "React-js",
             "frameworkIcons": [
                 {"src" : "/dist/images/about.jpg"},
@@ -38,7 +38,7 @@
                 {"src" : "/dist/images/about.jpg"},
                 {"src" : "/dist/images/slide_1.jpg"}
             ],
-            "featuredProject": 1,
+            "featuredProject": true,
             "frameworks": "React-js",
             "frameworkIcons": [
                 {"src" : "/dist/images/slide_1.jpg"},
@@ -62,7 +62,7 @@
                 {"src" : "/dist/images/about.jpg"},
                 {"src" : "/dist/images/landing.jpg"}   
             ],
-            "featuredProject": 1,
+            "featuredProject": true,
             "frameworks": "React-js",
             "frameworkIcons": [
                 {"src" : "/dist/images/slide_1.jpg"},
