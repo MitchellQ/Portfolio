@@ -4,61 +4,17 @@
             "title": "Portfolio Rebuild",
             "images": [
                 {"src" : "/dist/images/about.jpg"},
-                {"src" : "/dist/images/landing.jpg"},
-                {"src" : "/dist/images/slide_1.jpg"}
+                {"src" : "/dist/images/landing.jpg"}
+            ],
+            "imageCaptions": [ 
+                {"caption": "React-js"}
             ],
             "featuredProject": true,
-            "frameworks": "React-js",
+            "frameworks": [ 
+                {"framework": "React-js"}
+            ],
             "frameworkIcons": [
-                {"src" : "/dist/images/about.jpg"},
-                {"src" : "/dist/images/landing.jpg"},
-                {"src" : "/dist/images/slide_1.jpg"}
-            ],
-            "client": "",
-            "link": "",
-            "moreInfo": "",
-            "tagline": "Rebuilt my portfolio using React-js and hosting on Github pages",
-            "desc_1": "When I had time I had intented to move away from wordpress and rebuild my portfolio from the ground up",
-            "desc_2": "I choose to use React as this is a langauge I have enjoyed from my limited experience in, I wanted to get more experience so I thought this would be a good place to start.",
-            "desc_3": "",
-            "desc_4": ""
-        },
-        {
-            "title": "Portfolio Rebuild",
-            "images": [
-                {"src" : "/dist/images/landing.jpg"},
-                {"src" : "/dist/images/about.jpg"},
-                {"src" : "/dist/images/slide_1.jpg"}
-            ],
-            "featuredProject": true,
-            "frameworks": "React-js",
-            "frameworkIcons": [
-                {"src" : "/dist/images/slide_1.jpg"},
-                {"src" : "/dist/images/about.jpg"},
-                {"src" : "/dist/images/landing.jpg"}                
-            ],
-            "client": "",
-            "link": "",
-            "moreInfo": "",
-            "tagline": "Rebuilt my portfolio using React-js and hosting on Github pages",
-            "desc_1": "When I had time I had intented to move away from wordpress and rebuild my portfolio from the ground up",
-            "desc_2": "I choose to use React as this is a langauge I have enjoyed from my limited experience in, I wanted to get more experience so I thought this would be a good place to start.",
-            "desc_3": "",
-            "desc_4": ""
-        },
-        {
-            "title": "Portfolio Rebuild",
-            "images": [
-                {"src" : "/dist/images/slide_1.jpg"},
-                {"src" : "/dist/images/about.jpg"},
-                {"src" : "/dist/images/landing.jpg"}   
-            ],
-            "featuredProject": true,
-            "frameworks": "React-js",
-            "frameworkIcons": [
-                {"src" : "/dist/images/slide_1.jpg"},
-                {"src" : "/dist/images/about.jpg"},
-                {"src" : "/dist/images/landing.jpg"}                
+                {"src" : "/dist/images/flutter.png"}
             ],
             "client": "",
             "link": "",
