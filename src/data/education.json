@@ -1,0 +1,34 @@
+{
+    "education": [
+        {
+            "icon": "far fa-graduation-cap",
+            "title": "Bachleor of Information Technology",
+            "location": "Southern Institute of Technology",
+            "year": "2016 - 2019"
+        },
+        {
+            "icon": "far fa-tools",
+            "title": "Certificate in Mechanical Engineering",
+            "location": "Southern Institute of Technology",
+            "year": "July - December 2016"
+        },
+        {
+            "icon": "far fa-tools",
+            "title": "Certificate in Aeronautical Maintenance Engineering",
+            "location": "Nelson Marlborough Institute of Technology",
+            "year": "July - December 2014"
+        },
+        {
+            "icon": "far fa-plane",
+            "title": "Certificate in Travel, Tourism and Business",
+            "location": "Sir George Seymour College of Travel and Tourism",
+            "year": "January - December 2010"
+        },
+        {
+            "icon": "far fa-plane",
+            "title": "Certificate in International Flight Attending",
+            "location": "Sir George Seymour College of Travel and Tourism",
+            "year": "January - December 2010"
+        }
+    ]
+}
