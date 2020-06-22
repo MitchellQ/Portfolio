@@ -67,13 +67,13 @@ export default class SiteNav extends Component {
 
 class NavLink extends Component {
     static defaultProps = {
-        href: "#",
+        href: "",
         link: ""
     }
 
     render() {
         const { href, link } = this.props;
 
-        return <li><a href={`#` + href} className="nav-link">{link}</a></li>
+        return <li><a href={href} className="nav-link">{link}</a></li>
     }
 }
