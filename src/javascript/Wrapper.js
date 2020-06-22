@@ -21,7 +21,7 @@ export default class Wrapper extends Component {
     }
 
     render() {
-        const { testimonialsVisible, featuredProjectsVisible, contactFormVisible } = this.state;
+        const { testimonialsVisible, contactFormVisible } = this.state;
 
         return (
             <ErrorBoundary>
@@ -31,7 +31,7 @@ export default class Wrapper extends Component {
                     <Landing />              
                     <Project />
                     <About />
-                    {featuredProjectsVisible ? <FeaturedProjects /> : null}
+                    <FeaturedProjects />
                     {testimonialsVisible ? <Testimonials /> : null}
                     {contactFormVisible ? <Contact /> : null}
                     <Footer />
