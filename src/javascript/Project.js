@@ -12,7 +12,7 @@ export default class Project extends React.Component {
     // //   title, images, imageCaptions, frameworks, frameworkIcons, client, link, moreInfo, tagline, desc_1, desc_2, desc_3, desc_4
     // // } = this.state;
 
-    // const { projects } = this.state;
+    const { projects } = this.state;
 
 
     const frameworkItems = projects ? projects.map((project, key) => {
