@@ -1,7 +1,9 @@
 {
     "brand": "Mitchell Q",
     "navItems": [
-        { "href": "about-section", "link": "About" },
-        { "href": "contact-section", "link": "Contact" }
+        { "href": "#about-section", "link": "About" },
+        { "href": "#contact-section", "link": "Contact" },
+        { "href": "/Project", "link": "Project" },
+        { "href": "/project/Portfolio Rebuild", "link": "Portfolio Rebuild" }
     ]
 }
