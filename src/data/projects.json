@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "title": "Portfolio Rebuild",
+            "name": "Portfolio Rebuild",
             "images": [
                 {"src" : "/dist/images/about.jpg"},
                 {"src" : "/dist/images/landing.jpg"}
@@ -11,10 +11,10 @@
             ],
             "featuredProject": true,
             "frameworks": [ 
-                {"framework": "React-js"}
-            ],
-            "frameworkIcons": [
-                {"src" : "/dist/images/flutter.png"}
+                {
+                    "framework": "React-js",
+                    "icon" : "/dist/images/flutter.png"
+                }
             ],
             "client": "",
             "link": "",
