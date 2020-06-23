@@ -7,20 +7,20 @@ $fa-font-path: '~@fortawesome/fontawesome-pro/webfonts';
 @import '~@fortawesome/fontawesome-pro/scss/brands';
 @import '~@fortawesome/fontawesome-pro/scss/duotone';
 
-/* Flaticon
+/* Roboto Mono
 -------------------------------------------------- */
 @font-face {
-    font-family: 'Flaticon';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../../font/Flaticon.eot'); /* IE9 Compat Modes */
-    src: local('Flaticon'), local('Flaticon'),
-         url('../../font/Flaticon.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../../font/Flaticon.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../../font/Flaticon.woff') format('woff'), /* Modern Browsers */
-         url('../../font/Flaticon.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../../font/Flaticon.svg#Flaticon') format('svg'); /* Legacy iOS */
-  }
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/font/roboto-mono-v8-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/font/roboto-mono-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/font/roboto-mono-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/font/roboto-mono-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/font/roboto-mono-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/font/roboto-mono-v8-latin-regular.svg#RobotoMono') format('svg'); /* Legacy iOS */
+}
   body {
-    font-family: 'flaticon';
+    font-family: 'Roboto Mono';
   }
