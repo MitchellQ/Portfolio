@@ -15,9 +15,9 @@ export default class Project extends React.Component {
     const { projects } = this.state;
 
 
-    const frameworkItems = projects ? projects.map((project, key) => {
-      return <Framework framework={project.frameworks[0].framework} src ={project.frameworkIcons[0].src} key={key} />;
-    }) : null;
+    // const frameworkItems = projects ? projects.map((project, key) => {
+    //   return <Framework framework={project.frameworks[0].framework} src ={project.frameworkIcons[0].src} key={key} />;
+    // }) : null;
 
     return (
       <section className="site-section">
@@ -142,7 +142,7 @@ export default class Project extends React.Component {
               <div className="sidebar-box">
                 <div className="categories">
                   <h3>Technologies used </h3>
-                  {frameworkItems}
+                  {/* {frameworkItems} */}
                 </div>
               </div>
             </div>
@@ -153,21 +153,21 @@ export default class Project extends React.Component {
   }
 }
 
-class ProjectImage extends React.Component {
+// class ProjectImage extends React.Component {
   
-}
+// }
 
-class Framework extends React.Component {
-  static defaultProps = {
-    framework: "",
-    src: ""
-  }
+// class Framework extends React.Component {
+//   static defaultProps = {
+//     framework: "",
+//     src: ""
+//   }
 
-  render() {
-    const { src, framework } = this.props;
+//   render() {
+//     const { src, framework } = this.props;
 
-    return (
-      <li>{framework} <img style={{ float: "right" }} height="30" src={src}/></li>
-    );
-  }
-}
+//     return (
+//       <li>{framework} <img style={{ float: "right" }} height="30" src={src}/></li>
+//     );
+//   }
+// }
