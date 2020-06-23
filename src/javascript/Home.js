@@ -1,4 +1,4 @@
-import React, { Fragement } from "react";
+import React, { Fragment } from "react";
 
 import About from "./About";
 import Project from "./Project";
