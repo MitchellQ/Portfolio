@@ -12,7 +12,7 @@ export default class SiteNav extends Component {
         const { brand, navItems } = this.state;
 
         const links = navItems.map((item, key) => {
-            return <NavLink href={item.href} link={item.link} key={key} />
+            return <NavLink href={item.href} name={item.name} key={key} />
         });
         
         return (
@@ -68,12 +68,17 @@ export default class SiteNav extends Component {
 class NavLink extends Component {
     static defaultProps = {
         href: "",
-        link: ""
+        name: ""
     }
 
     render() {
-        const { href, link } = this.props;
+        const { href, name } = this.props;
 
-        return <li><a href={href} className="nav-link">{link}</a></li>
+        return <li>
+            <a href={href} className="nav-link" download={name == "Download CV"}>
+                { name == "Download CV" ? <i className="far fa-download pr-2"></i> : null }
+                {name}
+            </a>
+        </li>
     }
 }
