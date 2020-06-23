@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
     }
     
     render() {
-        const { about, quickLinks, socialIcons } = this.state;
+        const { about, quickLinks } = this.state;
 
         return (
             <footer className="site-footer">
@@ -26,7 +26,13 @@ export default class Footer extends React.Component {
                             <ul className="list-unstyled">
                                 {
                                     quickLinks.map((l, key) => {
-                                        return <li  key={key}><a href={l.href} className="smoothscroll">{l.link}</a></li>
+                                        
+                                        return <li key={key}>
+                                            <a href={l.href} className="smoothscroll" download={l.name == "Download CV"}>
+                                                { l.name == "Download CV" ? <i className="far fa-download pr-2"></i> : null }
+                                                {l.name}
+                                            </a>
+                                        </li>
                                     })
                                 }
                             </ul>
