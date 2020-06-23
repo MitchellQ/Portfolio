@@ -6,6 +6,7 @@ import Spinner from './components/Spinner';
 import SiteNav from './components/SiteNav';
 import SiteNav from './components/Home';
 import Footer from './Footer';
+import Education from './Education';
 
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
@@ -17,6 +18,7 @@ export default class Wrapper extends Component {
                 <Spinner />                
                 <div className="site-wrap">
                     <SiteNav />
+
                     <Switch>
                         <Route path="/">
                             <h1>Test</h1>
@@ -33,7 +35,7 @@ export default class Wrapper extends Component {
                      <Project /> 
                      <Home />
                      */}
-                  
+          
                     <Footer />
                 </div>
             </ErrorBoundary>

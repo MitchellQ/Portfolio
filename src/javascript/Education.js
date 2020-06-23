@@ -57,14 +57,14 @@ class EducationCard extends React.Component {
       <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
         <div className="unit-4">
           <div className="unit-4-icon mr-4">
-            <span className="text-primary">
+            <span className="text-accent">
               <i className={icon} />
             </span>
           </div>
           <div>
             <h3>{title}</h3>
             <p>{location}</p>
-            <p className="text-primary">{year}</p>
+            <p className="text-accent">{year}</p>
           </div>
         </div>
       </div>
