@@ -4,7 +4,7 @@ export default class FeaturedProjects extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = require("../data/projects.json");
+    this.state = { projects: require("../data/projects.json") } 
   }
 
   render() {
