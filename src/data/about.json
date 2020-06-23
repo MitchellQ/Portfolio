@@ -1,0 +1,18 @@
+{
+    "p1": "Test",
+    "p2": "Test 2",
+    "socialIcons": [
+        {
+            "icon": "fab fa-linkedin-in",
+            "href": "https://www.linkedin.com/in/mitchellq/"
+        },
+        {
+            "icon": "fab fa-github",
+            "href": "https://github.com/MitchellQ"
+        },
+        {
+            "icon": "far fa-download",
+            "href": "/dist/files/Mitch Q CV.pdf"
+        }
+    ]
+}
