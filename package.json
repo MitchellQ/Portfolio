@@ -4,10 +4,10 @@
   "description": "Mitchell's new React Powered portfolio which will be hosted on Github Pages",
   "main": "index.js",
   "scripts": {
-    "test": "npm -v",
     "build": "webpack --progress --profile",
     "watch": "webpack --progress --profile --watch",
-    "production": "webpack --progress --profile --mode production"
+    "production": "webpack --progress --profile --mode production",
+    "gh-pages": "npm run production && git commit && git push"
   },
   "repository": {
     "type": "git",

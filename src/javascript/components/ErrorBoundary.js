@@ -1,4 +1,5 @@
 import React from 'react';
+import { ServerError } from './Error';
 
 export default class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -17,7 +18,7 @@ export default class ErrorBoundary extends React.Component {
     render() {
         if(this.state.hasError) {
             // You can render a fallback URL here
-            return <h1>Something went Wrong!</h1>
+            return <ServerError />
         } 
         
         return this.props.children;
