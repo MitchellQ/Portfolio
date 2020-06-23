@@ -22,7 +22,7 @@ export default class Wrapper extends Component {
 
                     <Switch>
                         <Route exact path="/" component={Home}/>
-                        <Route path="/projects/:name" component={Project} />
+                        <Route path="/Projects/:name" component={Project} />
                         <Route component={NotFound} />
                     </Switch>
                     
