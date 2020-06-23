@@ -27,7 +27,7 @@
 		return (
 		<section className="site-section">
 			<div className="container">
-			<div className="row">
+			<div className="row mt-5">
 				<div className="col-md-8 blog-content">
 				<div className="row mb-5">
           {projectImages}
