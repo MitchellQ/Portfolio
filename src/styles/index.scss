@@ -15,6 +15,10 @@
 
 @import './typography';
 
+/* Bootstrap primary colour override
+ ------------------------------ */
+$primary: #0056b3;
+
 /* Theme Styles
  ------------------------------ */
 @import "site-base";
