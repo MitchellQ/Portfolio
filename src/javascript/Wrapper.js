@@ -12,6 +12,7 @@ import FeaturedProjects from './FeaturedProjects';
 import Testimonials from './Testimonials';
 import Contact from './Contact';
 import Footer from './Footer';
+import Education from './Education';
 
 export default class Wrapper extends Component {
     constructor(props) {
@@ -32,6 +33,7 @@ export default class Wrapper extends Component {
                     {/* <Project /> */}
                     <About />
                     <FeaturedProjects />
+                    <Education />
                     {testimonialsVisible ? <Testimonials /> : null}
                     {contactFormVisible ? <Contact /> : null}
                     <Footer />
