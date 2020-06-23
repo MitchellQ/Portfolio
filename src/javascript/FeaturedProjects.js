@@ -31,7 +31,7 @@ export default class FeaturedProjects extends React.Component {
     }) : null;
 
     return (
-      <section className="site-section" id="featured-section">
+      <section className="site-section" id="featured">
         <div className="container">
           <div className="row mb-5 justify-content-center">
             <div className="col-md-7 text-center">

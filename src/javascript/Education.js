@@ -27,7 +27,7 @@ export default class Education extends React.Component {
     return (
       <section
         className="site-section border-bottom bg-light"
-        id="education-section"
+        id="education"
       >
         <div className="container">
           <div className="row mb-5">

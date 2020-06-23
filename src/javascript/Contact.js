@@ -32,7 +32,7 @@ export default class Contact extends React.Component {
 
     render() {
         return (
-            <section className="site-section bg-light aos-init aos-animate" id="contact-section" data-aos="fade">
+            <section className="site-section bg-light aos-init aos-animate" id="contact" data-aos="fade">
                 <div className="container">
                     <div className="row mb-5">
                         <div className="col-12 text-center">
