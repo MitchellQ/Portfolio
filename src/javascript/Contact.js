@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
                     <div className="row mb-5">
                         <div className="col-md-6 text-center">
                             <p className="mb-4">
-                                <span className="d-block h4 text-primary">
+                                <span className="d-block h4 text-accent">
                                     <i className="far fa-map-marker"></i>
                                 </span>
                                 <span>Invercargill, New Zealand</span>
@@ -50,7 +50,7 @@ export default class Contact extends React.Component {
                         </div>
                         <div className="col-md-6 text-center">
                             <p className="mb-0">
-                                <span className="d-block h4 text-primary">
+                                <span className="d-block h4 text-accent">
                                     <i className="far fa-envelope"></i>
                                 </span>
                                 <a href="mailto:mitch@mitchellq.dev">mitch@mitchellq.dev</a>
