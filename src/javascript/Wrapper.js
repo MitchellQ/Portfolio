@@ -2,29 +2,15 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 import ErrorBoundary from './components/ErrorBoundary';
-import Landing from './components/Landing';
 import Spinner from './components/Spinner';
 import SiteNav from './components/SiteNav';
-
-import About from './About';
-import Project from './Project';
-import FeaturedProjects from './FeaturedProjects';
-import Testimonials from './Testimonials';
-import Contact from './Contact';
+import SiteNav from './components/Home';
 import Footer from './Footer';
 
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 export default class Wrapper extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = require('../data/siteSettings.json');
-    }
-
     render() {
-        const { testimonialsVisible, contactFormVisible } = this.state;
-
         return (
             <BrowserRouter>
             <ErrorBoundary>
@@ -42,12 +28,12 @@ export default class Wrapper extends Component {
 
                     </Switch>
 
-                    {/* <Landing />              
-                    <Project />
-                    <About />
-                    <FeaturedProjects />
-                    {testimonialsVisible ? <Testimonials /> : null}
-                    {contactFormVisible ? <Contact /> : null} */}
+                                
+                    {/*
+                     <Project /> 
+                     <Home />
+                     */}
+                  
                     <Footer />
                 </div>
             </ErrorBoundary>
