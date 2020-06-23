@@ -6,8 +6,10 @@ import Spinner from './components/Spinner';
 import SiteNav from './components/SiteNav';
 import Home from './Home';
 import Footer from './Footer';
+import Project from './Project';
+import { NotFound } from './components/Error';
 
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 export default class Wrapper extends Component {
     render() {
@@ -19,22 +21,11 @@ export default class Wrapper extends Component {
                     <SiteNav />
 
                     <Switch>
-                        <Route path="/">
-                            <h1>Test</h1>
-                        </Route>
-
-                        <Route path="/sam">
-                        <h1>Test 2</h1>
-                        </Route>
-
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/projects/:name" component={Project} />
+                        <Route component={NotFound} />
                     </Switch>
-
-                                
-                    {/*
-                     <Project /> 
-                     
-                     */}
-                    <Home />
+                    
                     <Footer />
                 </div>
             </ErrorBoundary>
