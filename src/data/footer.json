@@ -1,19 +1,10 @@
 {
     "about": "I have experience in developing for a range of platforms and frameworks including Flutter, C# and React-JS.\n I am seeking a full-time permanent position with a company that will support and nurture my talents during my IT journey.",
     "quickLinks": [
-        {"link": "About", "href": "#about-section"},
-        {"link": "Education", "href": "#education-section"},
-        {"link": "Featured Projects", "href": "#featured-section"},
-        {"link": "Github", "href": "https://github.com/MitchellQ"}
-    ],
-    "socialIcons": [
-        {
-            "icon": "fab fa-linkedin-in",
-            "href": "https://www.linkedin.com/in/mitchellq/"
-        },
-        {
-            "icon": "fab fa-github",
-            "href": "https://github.com/MitchellQ"
-        }
+        {"name": "About", "href": "#about"},
+        {"name": "Education", "href": "#education"},
+        {"name": "Featured Projects", "href": "#featured"},        
+        {"name": "Download CV", "href": "/dist/files/Mitch Q CV.pdf"},
+        {"name": "Github", "href": "https://github.com/MitchellQ"}
     ]
 }
