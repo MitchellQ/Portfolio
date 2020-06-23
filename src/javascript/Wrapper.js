@@ -6,8 +6,8 @@ import Spinner from './components/Spinner';
 import SiteNav from './components/SiteNav';
 import Home from './Home';
 import Footer from './Footer';
-import Project from './Project';
 import { NotFound } from './components/Error';
+import Project from './Project';
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
