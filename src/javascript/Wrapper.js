@@ -29,7 +29,7 @@ export default class Wrapper extends Component {
                 <div className="site-wrap">
                     <SiteNav />
                     <Landing />              
-                    <Project />
+                    {/* <Project /> */}
                     <About />
                     <FeaturedProjects />
                     {testimonialsVisible ? <Testimonials /> : null}
