@@ -1,29 +1,36 @@
-{
-    "projects": [
-        {
-            "name": "Portfolio Rebuild",
-            "images": [
-                {"src" : "/dist/images/about.jpg"},
-                {"src" : "/dist/images/landing.jpg"}
-            ],
-            "imageCaptions": [ 
-                {"caption": "React-js"}
-            ],
-            "featuredProject": true,
-            "frameworks": [ 
-                {
-                    "framework": "React-js",
-                    "icon" : "/dist/images/flutter.png"
-                }
-            ],
-            "client": "",
-            "link": "",
-            "moreInfo": "",
-            "tagline": "Rebuilt my portfolio using React-js and hosting on Github pages",
-            "desc_1": "When I had time I had intented to move away from wordpress and rebuild my portfolio from the ground up",
-            "desc_2": "I choose to use React as this is a langauge I have enjoyed from my limited experience in, I wanted to get more experience so I thought this would be a good place to start.",
-            "desc_3": "",
-            "desc_4": ""
-        }
-    ]
-}
+[
+    {
+        "name": "Discover Deep Cove",
+        "images": [
+            {
+                "src": "/dist/images/about.jpg",
+                "caption": "React-JS"
+            },
+            {
+                "src": "/dist/images/landing.jpg",
+                "caption": "Falcon Heavy"
+            }
+        ],
+        "featuredProject": true,
+        "frameworks": [
+            {
+                "framework": "React-js",
+                "icon": "/dist/images/flutter.png"
+            }
+        ],
+        "links": {
+            "website": "https://deepcovehostel.co.nz/",
+            "android": "https://play.google.com/store/apps/details?id=nz.co.deepcove.discover_deep_cove",
+            "apple": ""
+        },
+        "client": "Deep Cove Outdoor Education Trust",
+        "clientLogo": "/dist/images/Deep Cove Logo.png",
+        "aboutClient": "The Deep Cove Outdoor Education Trust is a non-profit organisation established in 1971 to help promote and educate tourists and school aged children on the importance of conservation and environmentally friendly practices in the remote Fiorland National Park.",
+        "moreInfo": "Projects/Discover-Deep-Cove",
+        "tagline": "Rebuilt my portfolio using React-js and hosting on Github pages",
+        "desc_1": "When I had time I had intented to move away from wordpress and rebuild my portfolio from the ground up",
+        "desc_2": "I choose to use React as this is a langauge I have enjoyed from my limited experience in, I wanted to get more experience so I thought this would be a good place to start.",
+        "desc_3": "",
+        "desc_4": ""
+    }
+]
