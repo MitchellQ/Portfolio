@@ -22,13 +22,13 @@ export default class Landing extends Component {
                             <h1 className="aos-init aos-animate" data-aos="fade-up">{greeting}</h1>
                             <p className="mb-5 desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" dangerouslySetInnerHTML={{__html: message_html}}/>
                             <div data-aos="fade-up" data-aos-delay="100" className="aos-init aos-animate">
-                                <a href="#contact-section" className="btn smoothscroll btn-primary mr-2 mb-2">Get In Touch</a>
+                                <a href="#contact" className="btn smoothscroll btn-primary mr-2 mb-2">Get In Touch</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <a href="#about-section" className="mouse smoothscroll">
+                <a href="#about" className="mouse smoothscroll">
                     <span className="mouse-icon">
                         <span className="mouse-wheel" />
                     </span>
