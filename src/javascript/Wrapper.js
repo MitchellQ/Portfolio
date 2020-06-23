@@ -6,7 +6,6 @@ import Spinner from './components/Spinner';
 import SiteNav from './components/SiteNav';
 import SiteNav from './components/Home';
 import Footer from './Footer';
-import Education from './Education';
 
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 

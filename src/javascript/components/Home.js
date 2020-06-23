@@ -5,6 +5,7 @@ import Project from "./Project";
 import FeaturedProjects from "./FeaturedProjects";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
+import Education from './Education';
 
 import Landing from "./components/Landing";
 
@@ -23,6 +24,7 @@ export default class Home extends React.Component {
         <Landing />
         <About />
         <FeaturedProjects />
+        <Education />
         {testimonialsVisible ? <Testimonials /> : null}
         {contactFormVisible ? <Contact /> : null}
       </Fragment>
