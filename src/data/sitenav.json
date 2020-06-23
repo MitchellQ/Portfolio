@@ -1,9 +1,10 @@
 {
     "brand": "Mitchell Q",
     "navItems": [
-        { "href": "#about-section", "link": "About" },
-        { "href": "#contact-section", "link": "Contact" },
-        { "href": "/Project", "link": "Project" },
-        { "href": "/project/Portfolio Rebuild", "link": "Portfolio Rebuild" }
+        { "href": "#about", "name": "About" },        
+        { "href": "#featured", "name": "Featured Projects" },
+        { "href": "#education", "name": "Education" },
+        { "href": "/dist/files/Mitch Q CV.pdf", "name": "Download CV" },
+        { "href": "#contact", "name": "Contact" }
     ]
 }
