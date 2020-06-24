@@ -1,5 +1,5 @@
 import React from 'react';
-import { ServerError } from './Error';
+import { DeveloperError } from './Error';
 
 export default class ErrorBoundary extends React.Component {
     constructor(props) {
@@ -17,8 +17,7 @@ export default class ErrorBoundary extends React.Component {
 
     render() {
         if(this.state.hasError) {
-            // You can render a fallback URL here
-            return <ServerError />
+            return <DeveloperError />
         } 
         
         return this.props.children;
