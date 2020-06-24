@@ -1,141 +1,195 @@
-	import React, { Fragment } from "react";
-	import { sanitiseHtml } from '../javascript/functions'
+import React, { Fragment } from "react";
+import { sanitiseHtml } from "../javascript/functions";
 
-	export default class Project extends React.Component {
-	constructor(props) {
-		super(props);
+export default class Project extends React.Component {
+  constructor(props) {
+    super(props);
 
-		this.state = {
-			project: require('../data/projects.json')
-		}
-	}
+    this.state = {
+      project: require("../data/projects.json"),
+    };
+  }
 
-	render() {
-		if (!this.state.project) return null
-		
-		const project = this.state.project.filter((project) => {
-			return project.name.replace(/ /g, "-") == this.props.match.params.name
+  render() {
+    if (!this.state.project) return null;
+
+    const project = this.state.project.filter((project) => {
+      return project.name.replace(/ /g, "-") == this.props.match.params.name;
     })[0];
 
     const frameworkItems = project.frameworks.map((framework, key) => {
-      return <Framework framework={framework.framework} icon={framework.icon} key={key} />
+      return (
+        <Framework
+          framework={framework.framework}
+          icon={framework.icon}
+          key={key}
+        />
+      );
     });
 
     const projectImages = project.images.map((image, key) => {
-      return <ProjectImage src={image.src} caption={image.caption} key={key}/>
+      return <ProjectImage src={image.src} caption={image.caption} key={key} />;
     });
 
-		return (
-		<section className="site-section">
-			<div className="container">
-			<div className="row mt-5">
-				<div className="col-md-8 blog-content">
-				<div className="row mb-5">
-          {projectImages}
-				</div>
-        <h2 className="pb-3">{project.name}</h2>
-				<p className="lead" dangerouslySetInnerHTML={{__html: sanitiseHtml(project.desc_1).replace(/\n/g, '</p><p>')}} />
-        
-        { project.desc_2 ? <p dangerouslySetInnerHTML={{__html: sanitiseHtml(project.desc_2).replace(/\n/g, '</p><p>')}} /> : null }
+    return (
+      <section className="site-section">
+        <div className="container">
+          <div className="row mt-5">
+            <div className="col-md-8 blog-content">
+              <div className="row mb-5">{projectImages}</div>
+              <h2 className="pb-3">{project.name}</h2>
+              <p
+                className="lead"
+                dangerouslySetInnerHTML={{
+                  __html: sanitiseHtml(project.desc_1).replace(
+                    /\n/g,
+                    "</p><p>"
+                  ),
+                }}
+              />
 
-        { project.desc_3 ? <p dangerouslySetInnerHTML={{__html: sanitiseHtml(project.desc_3).replace(/\n/g, '</p><p>')}} /> : null }
+              {project.desc_2 ? (
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: sanitiseHtml(project.desc_2).replace(
+                      /\n/g,
+                      "</p><p>"
+                    ),
+                  }}
+                />
+              ) : null}
 
-        { project.desc_4 ? <p dangerouslySetInnerHTML={{__html: sanitiseHtml(project.desc_4).replace(/\n/g, '</p><p>')}} /> : null }
+              {project.desc_3 ? (
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: sanitiseHtml(project.desc_3).replace(
+                      /\n/g,
+                      "</p><p>"
+                    ),
+                  }}
+                />
+              ) : null}
 
-				</div>
-				<div className="col-md-4 sidebar">
-				<div className="sidebar-box">
-					<img
-					src={project.clientLogo}
-					alt="Image placeholder"
-					className="img-fluid mb-4"
-					/>
-					<h3>{project.client}</h3>
-          <p className="pb-3">{project.aboutClient}</p>
-					
-					<Links urls={project.links} />
-					
-				</div>
+              {project.desc_4 ? (
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: sanitiseHtml(project.desc_4).replace(
+                      /\n/g,
+                      "</p><p>"
+                    ),
+                  }}
+                />
+              ) : null}
+            </div>
+            <div className="col-md-4 sidebar">
+              <div className="sidebar-box">
+                <img
+                  src={project.clientLogo}
+                  alt="Image placeholder"
+                  className="img-fluid mb-4"
+                />
+                <h3>{project.client}</h3>
+                <p className="pb-3">{project.aboutClient}</p>
 
-				<div className="sidebar-box">
-					<div className="categories">
-					<h3>Technologies used </h3>
-					{frameworkItems}
-					</div>
-				</div>
-				</div>
-			</div>
-			</div>
-		</section>
-		);
-	}
-	}
+                <Links urls={project.links} />
+              </div>
 
-	class ProjectImage extends React.Component {
-    static defaultProps = {
-      src: "",
-      caption: ""
-    }
-
-    render() {
-      const { src, caption } = this.props;
-
-      return (
-        <div className="col-lg-6">
-        <figure>
-						<img
-						src={src}
-						alt="Image"
-						className="img-fluid"
-						/>
-						<figcaption>{caption}</figcaption>
-					</figure>
+              <div className="sidebar-box">
+                <div className="categories">
+                  <h3>Technologies used </h3>
+                  {frameworkItems}
+                </div>
+              </div>
+            </div>
           </div>
-      );
-    }
-	}
+        </div>
+      </section>
+    );
+  }
+}
 
-	class Framework extends React.Component {
-	  static defaultProps = {
-	    framework: "",
-	    src: ""
-	  }
+class ProjectImage extends React.Component {
+  static defaultProps = {
+    src: "",
+    caption: "",
+  };
 
-	  render() {
-	    const { framework, icon } = this.props;
+  render() {
+    const { src, caption } = this.props;
 
-	    return (
-	      <li>{framework} <img style={{ float: "right" }} height="30" src={icon}/></li>
-	    );
-	  }
-	}
+    return (
+      <div className="col-lg-6">
+        <figure>
+          <img src={src} alt="Image" className="img-fluid" />
+          <figcaption>{caption}</figcaption>
+        </figure>
+      </div>
+    );
+  }
+}
 
-  class Links extends React.Component {
-    render() {
-        const {website, android, apple} = this.props.urls;
+class Framework extends React.Component {
+  static defaultProps = {
+    framework: "",
+    src: "",
+  };
 
-        let btn = website ? <div className="text-center" ><a href={website}  target="_blank" rel="noopener" className="btn btn-primary btn-sm app-badge">
-						Visit the site
-					</a></div> : null
+  render() {
+    const { framework, icon } = this.props;
 
-        let google_btn = android ? <a href={android} target="_blank" rel="noopener">
-            <img className="app-badge" src="/dist/images/google play badge.png" alt="Get it on Google Play"/>
-        </a> : null
+    return (
+      <li>
+        {framework} <img style={{ float: "right" }} height="30" src={icon} />
+      </li>
+    );
+  }
+}
 
-        let apple_btn = apple ? <a href={apple} target="_blank" rel="noopener">
-            <img className="app-badge" src="dist/images/apple app store badge.png" alt="Get it on the App Store"/>
-        </a> : null
+class Links extends React.Component {
+  render() {
+    const { website, android, apple } = this.props.urls;
 
-        return (
-            <Fragment>
-                <div className="my-3">
-                    {btn}
-                </div>
-                <div>
-                    {google_btn}
-                    {apple_btn}
-                </div>
-            </Fragment>
-        );
-    }
+    let btn = website ? (
+      <div className="text-center">
+        <a
+          href={website}
+          target="_blank"
+          rel="noopener"
+          className="btn btn-primary btn-sm app-badge"
+        >
+          Visit the site
+        </a>
+      </div>
+    ) : null;
+
+    let google_btn = android ? (
+      <a href={android} target="_blank" rel="noopener">
+        <img
+          className="app-badge"
+          src="/dist/images/google play badge.png"
+          alt="Get it on Google Play"
+        />
+      </a>
+    ) : null;
+
+    let apple_btn = apple ? (
+      <a href={apple} target="_blank" rel="noopener">
+        <img
+          className="app-badge"
+          src="dist/images/apple app store badge.png"
+          alt="Get it on the App Store"
+        />
+      </a>
+    ) : null;
+
+    return (
+      <Fragment>
+        <div className="my-3">{btn}</div>
+        <div>
+          {google_btn}
+          {apple_btn}
+        </div>
+      </Fragment>
+    );
+  }
 }
