@@ -1,4 +1,5 @@
 import React from "react";
+import { sanitiseHtml } from '../javascript/functions'
 
 export default class FeaturedProjects extends React.Component {
   constructor(props) {
@@ -109,7 +110,7 @@ class ProjectCard extends React.Component {
       <div>
         <h2 className="section-title mb-3">{title}</h2>
         <p className="lead">{tagline}</p>
-        <p>{desc_1}</p>
+        <p dangerouslySetInnerHTML={{__html: sanitiseHtml(desc_1).replace(/\n/g, '</p><p>')}} />
         <p>
           <a href={moreInfo} className="btn btn-primary mr-2 mb-2">
             Learn More

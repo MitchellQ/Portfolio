@@ -1,4 +1,5 @@
 import React from "react";
+import { sanitiseHtml } from '../javascript/functions'
 
 export default class About extends React.Component {
   constructor(props) {
@@ -53,8 +54,8 @@ export default class About extends React.Component {
               data-aos-delay="100"
             >
               <div className="mb-4">
-                <p>{p1}</p>
-                <p>{p2}</p>                
+              <p dangerouslySetInnerHTML={{__html: sanitiseHtml(p1).replace(/\n/g, '</p><p>')}} />
+              <p dangerouslySetInnerHTML={{__html: sanitiseHtml(p2).replace(/\n/g, '</p><p>')}} />
               </div>
             </div>
           </div>
