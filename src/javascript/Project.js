@@ -1,4 +1,5 @@
 	import React, { Fragment } from "react";
+	import { sanitiseHtml } from '../javascript/functions'
 
 	export default class Project extends React.Component {
 	constructor(props) {
@@ -33,15 +34,13 @@
           {projectImages}
 				</div>
         <h2 className="pb-3">{project.name}</h2>
-				<p className="lead">
-					{project.desc_1}
-				</p>
+				<p className="lead" dangerouslySetInnerHTML={{__html: sanitiseHtml(project.desc_1).replace(/\n/g, '</p><p>')}} />
         
-        { project.desc_2 ? <p>{project.desc_2}</p> : null }
+        { project.desc_2 ? <p dangerouslySetInnerHTML={{__html: sanitiseHtml(project.desc_2).replace(/\n/g, '</p><p>')}} /> : null }
 
-        { project.desc_3 ? <p>{project.desc_3}</p> : null }
+        { project.desc_3 ? <p dangerouslySetInnerHTML={{__html: sanitiseHtml(project.desc_3).replace(/\n/g, '</p><p>')}} /> : null }
 
-        { project.desc_4 ? <p>{project.desc_4}</p> : null }
+        { project.desc_4 ? <p dangerouslySetInnerHTML={{__html: sanitiseHtml(project.desc_4).replace(/\n/g, '</p><p>')}} /> : null }
 
 				</div>
 				<div className="col-md-4 sidebar">
