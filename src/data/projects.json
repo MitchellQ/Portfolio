@@ -31,6 +31,11 @@
             "android": "https://play.google.com/store/apps/details?id=nz.co.deepcove.discover_deep_cove",
             "apple": ""
         },
+        "developers": [
+            {"name": "Mitchell Quarrie", "githubName": "mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"},
+            {"name": "Samuel Grant", "githubName": "samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
+            {"name": "Sam Jackson", "githubName": "jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
+        ],
         "client": "Deep Cove Outdoor Education Trust",
         "clientLogo": "/dist/images/deepcove-logo.png",
         "aboutClient": "The Deep Cove Outdoor Education Trust is a non-profit organisation established in 1971 to help promote and educate tourists and school aged children on the importance of conservation and environmentally friendly practices in the remote Fiorland National Park.",

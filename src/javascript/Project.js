@@ -19,9 +19,9 @@ export default class Project extends React.Component {
 
     const frameworkItems = project.frameworks.map((framework, key) => {
       return (
-        <Framework
+        <ListItem
           framework={framework.framework}
-          icon={framework.icon}
+          icon1={framework.icon}
           key={key}
         />
       );
@@ -100,6 +100,21 @@ export default class Project extends React.Component {
                   {frameworkItems}
                 </div>
               </div>
+
+			  <div className="sidebar-box">
+                <div className="categories">
+                  <h3>Technologies used </h3>
+                  {frameworkItems}
+                </div>
+              </div>
+
+			  <div className="sidebar-box">
+                <div className="categories">
+                  <h3>Technologies used </h3>
+                  {frameworkItems}
+                </div>
+              </div>
+			  
             </div>
           </div>
         </div>
@@ -128,18 +143,26 @@ class ProjectImage extends React.Component {
   }
 }
 
-class Framework extends React.Component {
-  static defaultProps = {
-    framework: "",
-    src: "",
-  };
+class ListItem extends React.Component {
+	static defaultProps = {
+		href1: 'javascript:void(0)',
+		href2: 'javascript:void(0)'
+	}
 
-  render() {
-    const { framework, icon } = this.props;
+	
+	render() {
+    const { text, icon1, icon2, href1, href2 } = this.props;
 
     return (
+
+		
       <li>
-        {framework} <img style={{ float: "right" }} height="30" src={icon} />
+        {text} 
+		<a href={href1}><img style={{ float: "right" }} height="30" src={icon1} /> </a>
+		<a
+          href={href2}>
+		{ icon2 ? <img className="pr-3" style={{ float: "right" }} height="30" src={icon2} /> : null}
+		</a>
       </li>
     );
   }
