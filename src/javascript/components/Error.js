@@ -22,11 +22,13 @@ export class ServerError extends React.Component {
     }
 
     render() {
+        return(
         <ErrorWrapper>
             <i className="fad fa-bug fa-7x" />
             <h2>Something Went Wrong</h2>
             <p>please try again later</p>
         </ErrorWrapper>
+        )
     }
 }
 
@@ -37,12 +39,12 @@ class ErrorWrapper extends React.Component {
                 <div className="col-12">
                     {this.props.children}
 
-                    <div className="row">
+                    <div className="row  mt-5">
                         <HtmlComment text="Empty column to horizontally centre content" />
                         <div className="col"></div>
 
                         <div className="col-auto">
-                            <a className="btn btn-dark" href="/dist/files/MItch Q CV" download>
+                            <a className="btn btn-dark" href="/dist/files/Mitch Q CV.pdf" download>
                                 <i className="fas fa-download"/> Get my Resume
                             </a>
                         </div>

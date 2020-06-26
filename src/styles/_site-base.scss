@@ -331,3 +331,19 @@ body {
 .app-badge {
 	width: 100%;
 }
+
+.row.error {
+	i.fad.fa-sad-tear{
+		padding-top: 3rem;
+		margin-top: 3rem;
+	}
+
+	i.fad.fa-bug{
+		padding-top: 3rem;
+		margin-top: 3rem;
+	}
+
+	text-align: center;
+	padding:  3rem 0;
+	margin-bottom: 3rem;
+}
