@@ -164,13 +164,13 @@ class ListItem extends React.Component {
       <li>
           {text}
           <a href={href1}
-          {...hrefTest1.includes('javascript') ? '_blank' : '_self'}
+          target={hrefTest1.includes('javascript') ? '_blank' : '_self'}
           rel="noopener"
           >
-            <img style={{ float: "right" }} height="30" src={icon1} />{" "}
+            <img style={{ float: "right", verticalAlign: "middle" }} height="30" src={icon1} />{" "}
           </a>
           <a href={href2}
-          {...hrefTest2.includes('javascript') ? '_blank' : '_self'}
+          target={hrefTest2.includes('javascript') ? '_blank' : '_self'}
           rel="noopener"
           >
             {icon2 ? (
