@@ -17,11 +17,24 @@ export default class Project extends React.Component {
       return project.name.replace(/ /g, "-") == this.props.match.params.name;
     })[0];
 
-    const frameworkItems = project.frameworks.map((framework, key) => {
+    const frameworks = project.frameworks.map((framework, key) => {
       return (
         <ListItem
-          framework={framework.framework}
+          text={framework.framework}
           icon1={framework.icon}
+          key={key}
+        />
+      );
+    });
+
+    const developers = project.developers.map((developer, key) => {
+      return (
+        <ListItem
+          text={developer.name}
+          icon1={'/dist/images/github.png'}
+          href1={developer.githubName}
+          icon2={'/dist/images/linkedin.png'}
+          href2={developer.linkedin}
           key={key}
         />
       );
@@ -97,27 +110,19 @@ export default class Project extends React.Component {
               <div className="sidebar-box">
                 <div className="categories">
                   <h3>Technologies used </h3>
-                  {frameworkItems}
+                  {frameworks}
                 </div>
               </div>
 
-			  <div className="sidebar-box">
+              <div className="sidebar-box">
                 <div className="categories">
-                  <h3>Technologies used </h3>
-                  {frameworkItems}
+                  <h3>Developers</h3>
+                  {developers}
                 </div>
               </div>
-
-			  <div className="sidebar-box">
-                <div className="categories">
-                  <h3>Technologies used </h3>
-                  {frameworkItems}
-                </div>
               </div>
-			  
             </div>
           </div>
-        </div>
       </section>
     );
   }
@@ -144,25 +149,39 @@ class ProjectImage extends React.Component {
 }
 
 class ListItem extends React.Component {
-	static defaultProps = {
-		href1: 'javascript:void(0)',
-		href2: 'javascript:void(0)'
-	}
+  static defaultProps = {
+    href1: "javascript:void(0)",
+    href2: "javascript:void(0)",
+  };
 
-	
-	render() {
+  render() {
     const { text, icon1, icon2, href1, href2 } = this.props;
 
-    return (
+    var hrefTest1 = href1;
+    var hrefTest2 = href2;
 
-		
+    return (
       <li>
-        {text} 
-		<a href={href1}><img style={{ float: "right" }} height="30" src={icon1} /> </a>
-		<a
-          href={href2}>
-		{ icon2 ? <img className="pr-3" style={{ float: "right" }} height="30" src={icon2} /> : null}
-		</a>
+          {text}
+          <a href={href1}
+          {...hrefTest1.includes('javascript') ? '_blank' : '_self'}
+          rel="noopener"
+          >
+            <img style={{ float: "right" }} height="30" src={icon1} />{" "}
+          </a>
+          <a href={href2}
+          {...hrefTest2.includes('javascript') ? '_blank' : '_self'}
+          rel="noopener"
+          >
+            {icon2 ? (
+              <img
+                className="pr-3"
+                style={{ float: "right" }}
+                height="30"
+                src={icon2}
+              />
+            ) : null}
+          </a>
       </li>
     );
   }
