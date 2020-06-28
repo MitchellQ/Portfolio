@@ -71,11 +71,11 @@ class SocialIcon extends React.Component {
 
     const { icon, href } = this.props;
 
-    var str = href;
+    var hrefTest = href;
 
     return (
       <li>
-        <a href={href} target={str.includes('/dist') ? '_blank' : '_self' } download={str.includes('/dist')} rel="noopener">
+        <a href={href} target={hrefTest.includes('/dist') ? '_blank' : '_self' } download={str.includes('/dist')} rel="noopener">
           <i className={icon}></i>
         </a>
       </li>
