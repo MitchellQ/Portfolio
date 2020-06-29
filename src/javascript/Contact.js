@@ -1,16 +1,17 @@
 import React from 'react';
-import { Input, TextArea, FormGroup } from '../javascript/components/FormControls';
+import { Input, TextArea, FormGroup } from './Components/FormControls';
+import Captcha from './Components/Captchpa';
 
 export default class Contact extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            firstName: '',
-            lastName: '',
-            email: '',
-            subject: '',
-            message: '',
+            // firstName: '',
+            // lastName: '',
+            // email: '',
+            // subject: '',
+            // message: '',
 
             data: {
                 CaptchaCode: "",
@@ -18,6 +19,7 @@ export default class Contact extends React.Component {
                     Name: "",
                     Email: ""
                 },
+                Subject: "",
                 Message: ""
             }
         }
@@ -53,11 +55,11 @@ export default class Contact extends React.Component {
         alert("501: Form submit not implemented");
     }
 
-    handleChange(key, value) {
-        this.setState({
-            [key]: value
-        });
-    }
+    // handleChange(key, value) {
+    //     this.setState({
+    //         [key]: value
+    //     });
+    // }
 
 
     render() {
@@ -93,17 +95,10 @@ export default class Contact extends React.Component {
                                 <h2 className="h4 text-black mb-5">Contact Form</h2>
 
                                 <div className="row">
-                                    <FormGroup className="form-group col-md-6 mb-3 mb-md-0">
-                                        <Input type="text" placeHolder="First Name" required
-                                            autoComplete="name" value={this.state.firstName}
-                                            onChange={this.handleChange.bind(this, 'firstName')}
-                                        />
-                                    </FormGroup>
-
-                                    <FormGroup className="form-group col-md-6 mb-3 mb-md-0">
-                                        <Input type="text" placeHolder="Last Name" required
-                                            autoComplete="name" value={this.state.lastName}
-                                            onChange={this.handleChange.bind(this, 'lastName')}
+                                    <FormGroup className="form-group col-12 mb-3 mb-md-0">
+                                        <Input type="name" placeHolder="Name" required
+                                            autoComplete="name" value={this.state.email}
+                                            onChange={this.handleChange.bind(this, 'name')}
                                         />
                                     </FormGroup>
 
@@ -128,9 +123,9 @@ export default class Contact extends React.Component {
                                         />
                                     </FormGroup>
 
-                                    <Captcha onRef={reCaptcha => (this.reCaptcha = reCaptcha)} theme={'light'} size={'normal'}
+                                    {/* <Captcha onRef={reCaptcha => (this.reCaptcha = reCaptcha)} theme={'light'} size={'normal'}
                                         sitekey={this.state.reCaptchaKey} requireReady={false} onVerified={this.onVerified}
-                                    />
+                                    /> */}
 
                                     <div className="col-md-12">
                                         <input type="submit" id="submit" value="Send Message" className="btn btn-primary btn-md text-white" />

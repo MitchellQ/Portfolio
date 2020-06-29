@@ -6,7 +6,7 @@ import Developers from './Project/Developers';
 import ProjectImage from './Project/ProjectImage';
 import Links from './Project/Links';
 
-import HtmlComment from './components/HtmlComment.js'
+import HtmlComment from './Components/HtmlComment.js'
 
 export default class Project extends React.Component {
 	constructor(props) {

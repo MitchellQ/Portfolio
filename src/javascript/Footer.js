@@ -1,7 +1,7 @@
 import React from 'react';
 import HtmlComment from '../javascript/components/HtmlComment'
 import { sanitiseHtml } from '../javascript/functions'
-import SocialIcon from './components/SocialIcon';
+import SocialIcon from './Components/SocialIcon';
 
 export default class Footer extends React.Component {
     constructor(props) {

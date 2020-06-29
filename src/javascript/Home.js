@@ -7,7 +7,7 @@ import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import Education from './Education';
 
-import Landing from "./components/Landing";
+import Landing from "./Components/Landing";
 
 export default class Home extends React.Component {
   constructor(props) {
