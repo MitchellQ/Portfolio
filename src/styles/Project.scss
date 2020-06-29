@@ -1,0 +1,38 @@
+
+
+.techs-profile, .dev-profile {
+    font-size: larger;
+    color: black;
+    border: none;
+
+    li.list-group-item {
+        padding: 12px 10px;        
+    }
+
+    .fab {
+        padding: 10px;
+        font-size: 20px;
+        width: 15;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+
+        background: $primary;
+        color: white;
+    }
+
+    .fab:hover {
+        background: darken($primary, 7.5%);
+        border-color: darken($primary, 7.5%);
+    }
+}
+
+.dev-profile img {
+    float: left; 
+    height: 45px;
+}
+
+.techs-profile img {
+    float: right;
+    height: 45px;
+}

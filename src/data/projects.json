@@ -13,18 +13,10 @@
         ],
         "featuredProject": true,
         "frameworks": [
-            {
-                "framework": "Flutter",
-                "icon": "/dist/images/flutter.png"
-            },
-            {
-                "framework": "Dart",
-                "icon": "/dist/images/dart.png"
-            },
-            {
-                "framework": "GitHub",
-                "icon": "/dist/images/github.png"
-            }
+            "Flutter",
+            "Dart", 
+            "Github",
+            ".Net Core"
         ],
         "links": {
             "website": "https://deepcovehostel.co.nz/",
@@ -32,19 +24,16 @@
             "apple": ""
         },
         "developers": [
-            {"name": "Mitchell Quarrie", "githubName": "mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"},
-            {"name": "Samuel Grant", "githubName": "samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
-            {"name": "Sam Jackson", "githubName": "jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
+            {"name": "Mitchell Quarrie", "github": "mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"},
+            {"name": "Samuel Grant", "github": "samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
+            {"name": "Sam Jackson", "github": "jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
         ],
         "client": "Deep Cove Outdoor Education Trust",
         "clientLogo": "/dist/images/deepcove-logo.png",
         "aboutClient": "The Deep Cove Outdoor Education Trust is a non-profit organisation established in 1971 to help promote and educate tourists and school aged children on the importance of conservation and environmentally friendly practices in the remote Fiorland National Park.",
         "moreInfo": "Projects/Discover-Deep-Cove",
         "tagline": "Mobile, Web applications with CMS for the Deep Cove Outdoor Education Trust",
-        "desc_1": "I  worked as part of a team of three students to develop a web and mobile application for the Deep Cove Outdoor Education trust. This was the capstone project for my Bachelor of Information Technology.",
-        "desc_2": "The project consists of two components, an Android application called Discover Deep Cove and a website that merged and replaced two websites operated by the Trust.\nThis application can be downloaded by clicking on ‘see project’ link below. Features include a knowledge base with photos and sound clips to help identify wildlife, quizzes, and an interactive map with activities linked to QR codes in the area.",
-        "desc_3": "My role as Lead Mobile Application Developer, meant that I was in charge of building the mobile application. My main area was developing and building the UI and UX in our chosen framework 'Flutter'",
-        "desc_4": "The Discover Deep Cove application can be downloaded by clicking on ‘see project’ link below. Features include a knowledge base with photos and sound clips to help identify wildlife, quizzes, and an interactive map with activities linked to QR codes in the area."
+        "description": "I  worked as part of a team of three students to develop a web and mobile application for the Deep Cove Outdoor Education trust. This was the capstone project for my Bachelor of Information Technology.\nThe project consists of two components, an Android application called Discover Deep Cove and a website that merged and replaced two websites operated by the Trust.\nThis application can be downloaded by clicking on ‘see project’ link below. Features include a knowledge base with photos and sound clips to help identify wildlife, quizzes, and an interactive map with activities linked to QR codes in the area.\nMy role as Lead Mobile Application Developer, meant that I was in charge of building the mobile application. My main area was developing and building the UI and UX in our chosen framework 'Flutter'\nThe Discover Deep Cove application can be downloaded by clicking on ‘see project’ link below. Features include a knowledge base with photos and sound clips to help identify wildlife, quizzes, and an interactive map with activities linked to QR codes in the area."
     },
     {
         "name": "Fight for Kidz",
@@ -56,40 +45,27 @@
         ],
         "featuredProject": true,
         "frameworks": [
-            {
-                "framework": "HTML 5",
-                "icon": "/dist/images/html.png"
-            },
-            {
-                "framework": "CSS",
-                "icon": "/dist/images/css.png"
-            },
-            {
-                "framework": "PHP",
-                "icon": "/dist/images/php.png"
-            },
-            {
-                "framework": "Laravel",
-                "icon": "/dist/images/laravel.png"
-            },
-            {
-                "framework": "GitHub",
-                "icon": "/dist/images/github.png"
-            }
+            "HTML 5",
+            "CSS", 
+            "PHP",
+            "Laravel",
+            "Github"
         ],
         "links": {
             "website": "https://www.fightforkidz.co.nz/",
             "android": "",
             "apple": ""
         },
+        "developers": [
+            {"name": "Mitchell Quarrie", "github": "mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"},
+            {"name": "Samuel Grant", "github": "samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
+            {"name": "Sam Jackson", "github": "jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
+        ],
         "client": "Fight for Kidz",
         "clientLogo": "/dist/images/f4k-logo.png",
         "aboutClient": "Fight for Kidz is a charity boxing event held in Southland raising funds for kid's charities. All funds raised stay in Southland. This event has been running since 2003 and raised almost $700,000.",
         "moreInfo": "Projects/Fight-for-Kidz",
         "tagline": "Web application and CMS for the Fight for Kidz charity boxing organization",
-        "desc_1": "I worked as part of a team of four students to develop a web application for Fight for Kidz, a non-profit organisation that runs a charity boxing events in Invercargill fundraising for charities that work with our most vulnerable children. This project was for a second year Project Management paper",
-        "desc_2": "The website features a content management system that allows Fight for Kidz to manage applications for each event, helping them streamline their processes and publicise their events.",
-        "desc_3": "My role as Junior Web Developer led to me working in part on various aspects of the website, including but not limited to design, responsiveness, back end and CMS.",
-        "desc_4": "Recently, I have been helping to intergrate React into various aspects of the site to improve functionality and usability of the site"
+        "description": "I worked as part of a team of four students to develop a web application for Fight for Kidz, a non-profit organisation that runs a charity boxing events in Invercargill fundraising for charities that work with our most vulnerable children. This project was for a second year Project Management paper\nThe website features a content management system that allows Fight for Kidz to manage applications for each event, helping them streamline their processes and publicise their events.\nMy role as Junior Web Developer led to me working in part on various aspects of the website, including but not limited to design, responsiveness, back end and CMS.\nRecently, I have been helping to intergrate React into various aspects of the site to improve functionality and usability of the site"
     }
 ]
