@@ -27,8 +27,6 @@ export default class Wrapper extends Component {
                     </Switch>
                     
                     <Footer />
-
-                    <a href="#landing" className="scrollUp js-scroll-trigger"><i className="fa fa-chevron-up"></i></a>
                 </div>
             </ErrorBoundary>
             </BrowserRouter>

@@ -27,12 +27,3 @@ $(function() {
   $('body').scrollspy({
     target: '#sideNav'
   });
-(jQuery); 
-
-$(function() {
-  const scrollUp = document.querySelector('.scrollUp');
-
-  window.addEventListener('scroll', () => {
-    window.pageYOffset > 100 ? scrollUp.classList.add("active") : scrollUp.classList.remove("active");
-  });
-});
