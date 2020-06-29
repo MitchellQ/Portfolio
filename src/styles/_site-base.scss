@@ -347,3 +347,33 @@ body {
 	padding:  3rem 0;
 	margin-bottom: 3rem;
 }
+
+.scrollUp {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35px;
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: .5s;
+	background: $primary;
+	position: fixed;
+	bottom: 16px;
+	right: 32px;
+	height: 60px;
+	width: 60px;
+	border-radius: 5px;
+}
+
+.scrollUp.active {	
+	color: #ffffff;
+	bottom: 32px;
+	pointer-events: auto;
+	opacity: 1;
+	transform: translateY(-55px);
+}
