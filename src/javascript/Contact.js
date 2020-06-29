@@ -1,6 +1,5 @@
-import React from 'react'
-import { Input, TextArea, FormGroup } from '../javascript/components/FormControls'
-
+import React from 'react';
+import { Input, TextArea, FormGroup } from '../javascript/components/FormControls';
 
 export default class Contact extends React.Component {
     constructor(props) {
@@ -11,10 +10,41 @@ export default class Contact extends React.Component {
             lastName: '',
             email: '',
             subject: '',
-            message: ''
+            message: '',
+
+            data: {
+                CaptchaCode: "",
+                From: {
+                    Name: "",
+                    Email: ""
+                },
+                Message: ""
+            }
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        let apiUrl = "https://localhost:44351/"
+
+        $.ajax({
+            method: 'get',
+            url: apiUrl,
+            crossDomain: true,
+            success: ((res) => {
+                this.setState({
+                    apiUrl,
+                    reCaptchaKey: res.reCaptchaKey
+                });
+            })
+        });
+    }
+
+    onVerified(code) {
+        let data = this.state.data;
+        data['CaptchaCode'] = code;
+        this.setState({data});
     }
 
     handleSubmit(e) {
@@ -31,7 +61,7 @@ export default class Contact extends React.Component {
 
 
     render() {
-        return (
+        return this.state.apiUrl ? (
             <section className="site-section bg-light aos-init aos-animate" id="contact" data-aos="fade">
                 <div className="container">
                     <div className="row mb-5">
@@ -98,6 +128,10 @@ export default class Contact extends React.Component {
                                         />
                                     </FormGroup>
 
+                                    <Captcha onRef={reCaptcha => (this.reCaptcha = reCaptcha)} theme={'light'} size={'normal'}
+                                        sitekey={this.state.reCaptchaKey} requireReady={false} onVerified={this.onVerified}
+                                    />
+
                                     <div className="col-md-12">
                                         <input type="submit" id="submit" value="Send Message" className="btn btn-primary btn-md text-white" />
                                     </div>
@@ -107,6 +141,6 @@ export default class Contact extends React.Component {
                     </div>
                 </div>
             </section>
-        )
+        ) : null;
     }
 }
