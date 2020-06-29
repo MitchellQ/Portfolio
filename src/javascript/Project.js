@@ -161,28 +161,29 @@ class ListItem extends React.Component {
     var hrefTest2 = href2;
 
     return (
-      <li>
-          {text}
-          <a href={href1}
-          target={hrefTest1.includes('javascript') ? '_blank' : '_self'}
-          rel="noopener"
-          >
-            <img style={{ float: "right", verticalAlign: "middle" }} height="30" src={icon1} />{" "}
-          </a>
-          <a href={href2}
-          target={hrefTest2.includes('javascript') ? '_blank' : '_self'}
-          rel="noopener"
-          >
-            {icon2 ? (
-              <img
-                className="pr-3"
-                style={{ float: "right" }}
-                height="30"
-                src={icon2}
-              />
-            ) : null}
-          </a>
-      </li>
+      <div className="row py-2" style={{borderBottom: "1px dotted #dee2e6"}}> 
+          <div>{text}</div>
+          <div>
+            <a href={href1}
+            target={hrefTest1.includes('javascript') ? '_self' : '_blank'}
+            rel="noopener"
+            >
+              <img height="30" src={icon1} />{" "}
+            </a>
+            <a href={href2}
+            target={hrefTest2.includes('javascript') ? '_self' : '_blank'}
+            rel="noopener"
+            >
+              {icon2 ? (
+                <img
+                  className="pr-3"
+                  height="30"
+                  src={icon2}
+                />
+              ) : null}
+            </a>
+          </div>
+      </div>
     );
   }
 }
