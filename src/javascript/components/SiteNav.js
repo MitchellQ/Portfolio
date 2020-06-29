@@ -75,7 +75,7 @@ class NavLink extends Component {
         const { href, name } = this.props;
 
         return <li>
-            <a href={href} className="nav-link" download={name == "Download CV"}>
+            <a href={href} className="nav-link js-scroll-trigger" download={name == "Download CV"}>
                 { name == "Download CV" ? <i className="far fa-download pr-2"></i> : null }
                 {name}
             </a>

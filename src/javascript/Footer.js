@@ -28,7 +28,7 @@ export default class Footer extends React.Component {
                                     quickLinks.map((l, key) => {
                                         
                                         return <li key={key}>
-                                            <a href={l.href} className="smoothscroll" download={l.name == "Download CV"}>
+                                            <a href={l.href} className="js-scroll-trigger" download={l.name == "Download CV"}>
                                                 { l.name == "Download CV" ? <i className="far fa-download pr-2"></i> : null }
                                                 {l.name}
                                             </a>
