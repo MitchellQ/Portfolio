@@ -1,6 +1,6 @@
 import React from 'react';
 import { Input, TextArea, FormGroup } from './FormControls';
-import Captcha from './Captchpa';
+import Captcha from './Captcha';
 
 /** Import react-toastify to provide fancy notifications */
 import { ToastContainer, toast } from 'react-toastify';
