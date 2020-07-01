@@ -18,7 +18,8 @@ export default class SiteNav extends Component {
         return (
             <Fragment>                
                 <HtmlComment text={"Nav"} />
-                <nav className="navbar navbar-expand-md stickty-top">
+                {/* Surely a better way to indent than this? */}
+                <nav className="navbar navbar-expand-md stickty-top px-5 mx-5">
                     <div className="container-fluid">
                     <h1 className="mb-0 site-logo">
                                         <a href="/" className="h2 mb-0">{brand}<span>.</span> </a>
@@ -29,7 +30,7 @@ export default class SiteNav extends Component {
                         <span><i className="fab fa-bars" /></span>
                     </button>
                     
-                    <div className="collapse navbar-collapse" id="responsiveNav">
+                    <div className="collapse navbar-collapse" style={{whiteSpace: "nowrap"}} id="responsiveNav">
                         <ul className="navbar-nav ml-auto">
                             {links}
                         </ul>
@@ -37,7 +38,7 @@ export default class SiteNav extends Component {
                    
                 </nav>
 
-                {/* <HtmlComment text={"Main Nav"} />
+                <HtmlComment text={"Main Nav"} />
                 <div id="sticky-wrapper" className="sticky-wrapper" style={{height: '97px'}}>
                     <header className="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
                         <div className="container">
@@ -64,7 +65,8 @@ export default class SiteNav extends Component {
                                 </div>
                             </div>
                         </div>
-                    </header> */}
+                    </header>
+                </div>
              
             </Fragment>
         )
@@ -81,7 +83,7 @@ class NavLink extends Component {
         const { href, name } = this.props;
 
         return <li>
-            <a href={href} className="nav-item js-scroll-trigger" download={name == "Download CV"}>
+            <a href={href} className="nav-item js-scroll-trigger d-inline-blocks px-3" download={name == "Download CV"}>
                 { name == "Download CV" ? <i className="far fa-download pr-2"></i> : null }
                 {name}
             </a>
