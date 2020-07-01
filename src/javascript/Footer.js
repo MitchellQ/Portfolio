@@ -1,5 +1,5 @@
 import React from 'react';
-import HtmlComment from '../javascript/components/HtmlComment'
+import HtmlComment from '../javascript/Components/HtmlComment'
 import { sanitiseHtml } from '../javascript/functions'
 import SocialIcon from './Components/SocialIcon';
 
