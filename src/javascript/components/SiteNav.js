@@ -17,20 +17,47 @@ export default class SiteNav extends Component {
         
         return (
             <Fragment>
-                <HtmlComment text={"Mobile Nav"} />
-                <div className="site-mobile-menu site-navbar-target">
-                    <div className="site-mobile-menu-header">
-                        <div className="site-mobile-menu-close mt-3">
-                            <span className="icon-close2 js-menu-toggle"></span>
-                        </div>
+                <nav className="navbar navbar-expand-md bg-light navbar-light">
+                    <div className="container-fluid">
+                        <a className="navbar-brand" href="/" className="h2 mb-0">{brand}<span>.</span> </a>
                     </div>
-                    <div className="site-mobile-menu-body">
-                        <ul className="site-nav-wrap">
-                            {links}
+
+                    <HtmlComment text={"Mobile Nav"} />
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
+                        <span><i className="fab fa-bars" /></span>
+                    </button>
+                    
+                    <div className="collapse navbar-collapse" id="mobile-nav">
+                        <ul class>
+
                         </ul>
                     </div>
-                </div>
 
+                </nav>
+            </Fragment>
+        )
+    }
+}
+
+class NavLink extends Component {
+    static defaultProps = {
+        href: "",
+        name: ""
+    }
+
+    render() {
+        const { href, name } = this.props;
+
+        return <li>
+            <a href={href} className="nav-link js-scroll-trigger" download={name == "Download CV"}>
+                { name == "Download CV" ? <i className="far fa-download pr-2"></i> : null }
+                {name}
+            </a>
+        </li>
+    }
+}
+
+{/*
                 <HtmlComment text={"Main Nav"} />
                 <div id="sticky-wrapper" className="sticky-wrapper" style={{height: '97px'}}>
                     <header className="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
@@ -59,26 +86,4 @@ export default class SiteNav extends Component {
                             </div>
                         </div>
                     </header>
-                </div>
-            </Fragment>
-        )
-    }
-}
-
-class NavLink extends Component {
-    static defaultProps = {
-        href: "",
-        name: ""
-    }
-
-    render() {
-        const { href, name } = this.props;
-
-        return <li>
-            <a href={href} className="nav-link js-scroll-trigger" download={name == "Download CV"}>
-                { name == "Download CV" ? <i className="far fa-download pr-2"></i> : null }
-                {name}
-            </a>
-        </li>
-    }
-}
+                </div> */}
