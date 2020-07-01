@@ -1,0 +1,15 @@
+{
+    "name": "portable-express-server",
+    "version": "1.0.0",
+    "description": "A mini NPM package that only contains the essentials for an express server for hosting apps within docker",
+    "main": "index.js",
+    "scripts": {
+      "test": "npm -v",
+      "serve": "node index.js"
+    },
+    "author": "Samuel Grant",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }

@@ -30,6 +30,8 @@ COPY --from=build /app/index.html .
 COPY --from=build /app/index.js .
 COPY --from=build /app/sitemap.xml .
 COPY --from=build /app/dist dist/
+COPY --from=build /app/express-only.package.json ./package.json
+RUN npm install
 
 # Start webserver on port 80
-CMD ["node", "index.js"]
+CMD ["npm", "run", "serve"]
