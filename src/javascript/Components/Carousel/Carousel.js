@@ -35,7 +35,7 @@ export default class Carousel extends React.Component {
             <div>
                 <div className="row">
                     <div className="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-                        <div className="owl-carousel slide-one-item-alt">
+                        <div>
                             {images}
                         </div>
                         <CarouselToggle />
@@ -45,7 +45,7 @@ export default class Carousel extends React.Component {
                         data-aos="fade-up"
                         data-aos-delay="100"
                     >
-                        <div className="owl-carousel slide-one-item-alt-text">
+                        <div>
                             {cards}
                         </div>
                     </div>
