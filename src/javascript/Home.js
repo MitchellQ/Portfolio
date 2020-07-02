@@ -6,6 +6,7 @@ import FeaturedProjects from "./FeaturedProjects";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import Education from './Education';
+import Carousel from './Components/Carousel/Carousel'
 
 import Landing from "./Components/Landing";
 
@@ -26,11 +27,12 @@ export default class Home extends React.Component {
 
   render() {
     const { testimonialsVisible, contactFormVisible } = this.state;
-
+    
     return (
       <Fragment>
-        <Landing />
-        <About />
+        {/* <Landing />
+        <About /> */}
+        <Carousel />
         <FeaturedProjects />
         <Education />
         {testimonialsVisible ? <Testimonials /> : null}
