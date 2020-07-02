@@ -27,3 +27,12 @@ $(function() {
   $('body').scrollspy({
     target: '#sideNav'
   });
+
+
+  $(function() {
+    const navbar = document.querySelector('.navbar');
+  
+    window.addEventListener('scroll', () => {
+      window.pageYOffset > $(window).height() ? navbar.classList.add("scrolled") : navbar.classList.remove("scrolled");
+    });
+  });
