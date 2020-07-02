@@ -14,32 +14,32 @@ export default class SiteNav extends Component {
         const links = navItems.map((item, key) => {
             return <NavLink href={item.href} name={item.name} key={key} />
         });
-        
+
         return (
-            <Fragment>                
+            <Fragment>
                 <HtmlComment text={"Nav"} />
                 {/* Surely a better way to indent than this? */}
                 <nav className="navbar navbar-expand-md stickty-top px-5 mx-5">
                     <div className="container-fluid">
-                    <h1 className="mb-0 site-logo">
-                                        <a href="/" className="h2 mb-0">{brand}<span>.</span> </a>
-                                    </h1>
+                        <h1 className="mb-0 site-logo">
+                            <a href="/" className="h2 mb-0">{brand}<span>.</span> </a>
+                        </h1>
                     </div>
 
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsiveNav">
                         <span><i className="fab fa-bars" /></span>
                     </button>
-                    
-                    <div className="collapse navbar-collapse" style={{whiteSpace: "nowrap"}} id="responsiveNav">
+
+                    <div className="collapse navbar-collapse" style={{ whiteSpace: "nowrap" }} id="responsiveNav">
                         <ul className="navbar-nav ml-auto">
                             {links}
                         </ul>
                     </div>
-                   
+
                 </nav>
 
                 <HtmlComment text={"Main Nav"} />
-                <div id="sticky-wrapper" className="sticky-wrapper" style={{height: '97px'}}>
+                <div id="sticky-wrapper" className="sticky-wrapper" style={{ height: '97px' }}>
                     <header className="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
                         <div className="container">
                             <div className="row align-items-center">
@@ -60,14 +60,14 @@ export default class SiteNav extends Component {
                                 </div>
 
                                 <HtmlComment text={"Menu Toggle"} />
-                                <div className="col-6 d-inline-block d-xl-none ml-md-0 py-3" style={{position: 'relative', top: '3px'}}>
+                                <div className="col-6 d-inline-block d-xl-none ml-md-0 py-3" style={{ position: 'relative', top: '3px' }}>
                                     <a href="#" className="site-menu-toggle js-menu-toggle float-right"><span className="icon-menu h3"></span></a>
                                 </div>
                             </div>
                         </div>
                     </header>
                 </div>
-             
+
             </Fragment>
         )
     }
@@ -83,8 +83,8 @@ class NavLink extends Component {
         const { href, name } = this.props;
 
         return <li>
-            <a href={href} className="nav-item js-scroll-trigger d-inline-blocks px-3" download={name == "Download CV"}>
-                { name == "Download CV" ? <i className="far fa-download pr-2"></i> : null }
+            <a href={href} className="nav-item js-scroll-trigger d-inline-block px-3" download={name == "Download CV"}>
+                {name == "Download CV" ? <i className="far fa-download pr-2"></i> : null}
                 {name}
             </a>
         </li>
