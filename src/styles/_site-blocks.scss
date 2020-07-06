@@ -845,9 +845,6 @@
 		}
 		.icon {
 			color: $white;
-			span {
-				
-			}
 		}
 		.number {
 			background: darken($primary, 5%);
@@ -947,18 +944,6 @@
 .accordion-item[aria-expanded="true"] {
 	color: $primary;
 }
-
-.social-media {
-	display: inline-block;
-	float: left;
-	margin-bottom: 0px;
-	padding: 0;
-	li {
-		display: inline-block;
-	}
-}
-
-
 
 // Chimper
 
