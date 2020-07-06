@@ -1,7 +1,7 @@
 import React from 'react';
-import { sanitiseHtml } from '../../javascript/functions'
+import { sanitiseHtml } from '../functions'
 
-export default class FeaturedProject extends React.Component {
+export default class ProjectCard extends React.Component {
     projectUrl(url) {
         return `/Projects/${url.replace(/ /g, '-').replace('.', '-')}`;
     }
