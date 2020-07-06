@@ -1,74 +1,60 @@
 import React from "react";
+import TestimonialCard from './Components/TestimonialCard';
 
 export default class Testimonials extends React.Component {
-  constructor(props) {
-    super(props);
+	constructor(props) {
+		super(props);
 
-    this.state = require("../data/testimonials.json");
-  }
+		this.state = {
+			testimonials: require("../data/testimonials.json"),
+			index: 0
+		}
 
-  render() {
-    const { testimonials } = this.state;
+		this.setIndex = this.setIndex.bind(this);
+	}
 
-    const testimonialCards = testimonials
-      ? testimonials.map((testimonial, key) => {
-          return (
-            <TestimonialCard
-              content={testimonial.content}
-              author={testimonial.author}
-              image={testimonial.image}
-              key={key}
-            />
-          );
-        })
-      : null;
+	// Set an interval to auto play
+	componentDidMount() {
+		this.autoplay = setInterval(() => {
+			this.setIndex(this.state.index + 1)
+		}, 2 * 1000);
+	}
 
-    return (
-      <section
-        className="site-section testimonial-wrap"
-        id="testimonials-section"
-        data-aos="fade"
-      >
-        <div className="container">
-          <div className="row mb-5">
-            <div className="col-12 text-center">
-              <h2 className="section-title mb-3">Testimonials</h2>
-            </div>
-          </div>
-        </div>
+	// Clean resources when we kill this component
+	componentWillUnmount() {
+		clearInterval(this.autoplay);
+	}
 
-        <div className="slide-one-item home-slider owl-carousel">
-          {testimonialCards}
-        </div>
-      </section>
-    );
-  }
-}
+	// Adjust the index
+	setIndex(i) {
+		const { testimonials } = this.state;
 
-class TestimonialCard extends React.Component {
-  static defaultProps = {
-    content: "",
-    author: "",
-    iamge: "",
-  };
+		if (i < 0) {
+			i = testimonials.length - 1
+		} else if (i >= testimonials.length) {
+			i = 0;
+		}
 
-  render() {
-    const { content, author, image } = this.props;
+		this.setState({ index: i });
+	}
 
-    return (
-      <div>
-        <div className="testimonial">
-          <blockquote className="mb-5">
-            <p>&ldquo;{content}&rdquo;</p>
-          </blockquote>
-          <figure className="mb-4 d-flex align-items-center justify-content-center">
-            <div>
-              <img src={image} alt="Image" className="w-50 img-fluid mb-3" />
-            </div>
-            <p>{author}</p>
-          </figure>
-        </div>
-      </div>
-    );
-  }
+	render() {
+		const { index, testimonials } = this.state;
+
+		return (
+			<section className="site-section testimonial-wrap" id="testimonials" data-aos="fade">
+				<div className="container">
+					<div className="row mb-5">
+						<div className="col-12 text-center">
+							<h2 className="section-title mb-3">Testimonials</h2>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<TestimonialCard testimonial={testimonials[index]} />
+				</div>
+			</section>
+		);
+	}
 }
