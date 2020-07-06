@@ -1,122 +1,79 @@
 import React from "react";
-import { sanitiseHtml } from '../javascript/functions'
+import FeaturedProject from "./Components/FeaturedProject";
+import HtmlComment from './Components/HtmlComment';
 
 export default class FeaturedProjects extends React.Component {
-  constructor(props) {
-    super(props);
+	constructor(props) {
+		super(props);
+		this.state = { 
+			projects: require("../data/projects.json"),
+			index: 0
+		} 
 
-    this.state = { projects: require("../data/projects.json") } 
-  }
+		this.setIndex = this.setIndex.bind(this);
+	}
 
-  render() {
-    const { projects } = this.state;
+	// Set an interval to auto play
+	componentDidMount() {
+		this.autoplay = setInterval(() => {
+			this.setIndex(this.state.index +1)
+		}, 10 * 1000);
+	}
 
-    const images = projects ? projects.map((project, key) => {
-      if (project.featuredProject == true) {
-        return <ProjectImage path={project.images[0].src} key={key} />;
-      }
-    }) : null;
+	// Clean resources when we kill this component
+	componentWillUnmount() {
+		clearInterval(this.autoplay);
+	}
 
-    const cards = projects ? projects.map((project, key) => {
-      if (project.featuredProject == true) {
-        return (
-          <ProjectCard
-            title={project.title}
-            tagline={project.tagline}
-            desc_1={project.desc_1}
-            moreInfo={project.moreInfo}
-            key={key}
-          />
-        );
-      }
-    }) : null;
+	// Code to fire each time the index, or projects are updated
+	componentDidUpdate(_, prevState) {
+		if(prevState.projects.length != this.state.projects.length) {
+			this.setIndex(this.state.index);
+		}
 
-    return (
-      <section className="site-section" id="featured">
-        <div className="container">
-          <div className="row mb-5 justify-content-center">
-            <div className="col-md-7 text-center">
-              <h2
-                className="section-title mb-3"
-                data-aos="fade-up"
-                data-aos-delay=""
-              >
-                Featured Projects
-              </h2>
-              <p className="lead" data-aos="fade-up" data-aos-delay="100">
-                Some of my most recent projects
-              </p>
-            </div>
-          </div>
+		clearInterval(this.autoplay)
+		this.autoplay = setInterval(() => {
+			this.setIndex(this.state.index +1)
+		}, 10 * 1000);
+	}
 
-          <div className="row">
-            <div className="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-              <div className="owl-carousel slide-one-item-alt">
-                {images}
-              </div>
-              <div className="custom-direction">
-                <a href="#" className="custom-prev">
-                  <span>
-                    <i className="far fa-long-arrow-left"></i>
-                  </span>
-                </a>
-                <a href="#" className="custom-next">
-                  <span>
-                    <i className="far fa-long-arrow-right"></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-            <div
-              className="col-lg-5 ml-auto"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div className="owl-carousel slide-one-item-alt-text">
-                {cards}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-}
+	// Adjust the index
+	setIndex(i) {
+		const { projects } = this.state;
+		
+		if(i < 0) {
+			i = projects.length -1
+		} else if (i >= projects.length) {
+			i = 0;
+		}
+		
+		this.setState({index: i});		 
+	}
 
-class ProjectImage extends React.Component {
-  static defaultProps = {
-    path: "",
-  };
+	render() {
+		const { index, projects } = this.state;
+		
+		return (
+		<section className="site-section" id="featured">
+			<div className="container">
+				<HtmlComment text="Section mast" />
+				<div className="row mb-5 justify-content-center">
+					<div className="col-md-7 text-center">
+						<h2 className="section-title mb-3" data-aos="fade-up" data-aos-delay="">Featured Projects</h2>
 
-  render() {
-    const { path } = this.props;
+						<p className="lead" data-aos="fade-up" data-aos-delay="100">Dive into the Case Studies of my Featured Projects</p>
+					</div>
+				</div>
 
-    return <img src={path} alt="Image" className="img-fluid" />;
-  }
-}
-
-class ProjectCard extends React.Component {
-  static defaultProps = {
-    title: "",
-    tagline: "",
-    desc_1: "",
-    moreInfo: "",
-  };
-
-  render() {
-    const { title, tagline, desc_1, moreInfo } = this.props;
-
-    return (
-      <div>
-        <h2 className="section-title mb-3">{title}</h2>
-        <p className="lead">{tagline}</p>
-        <p dangerouslySetInnerHTML={{__html: sanitiseHtml(desc_1).replace(/\n/g, '</p><p>')}} />
-        <p>
-          <a href={moreInfo} className="btn btn-primary mr-2 mb-2">
-            Learn More
-          </a>
-        </p>
-      </div>
-    );
-  }
+				<HtmlComment text="Featured Project Display" />
+				<div className="featured-project-wrapper" >
+					<FeaturedProject project={projects[index]}
+						next={() => this.setIndex(index +1)}
+						previous={() => this.setIndex(index -1)} 
+					/>
+				</div>
+			</div>
+		</section>
+		);
+	}
 }
