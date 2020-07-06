@@ -31,15 +31,15 @@
         "client": "Deep Cove Outdoor Education Trust",
         "clientLogo": "/dist/images/deepcove-logo.png",
         "aboutClient": "The Deep Cove Outdoor Education Trust is a non-profit organisation established in 1971 to help promote and educate tourists and school aged children on the importance of conservation and environmentally friendly practices in the remote Fiorland National Park.",
-        "moreInfo": "Projects/Discover-Deep-Cove",
-        "tagline": "Mobile, Web applications with CMS for the Deep Cove Outdoor Education Trust",
+        "short_description": "A bespoke Android and Web Application for the Deep Cove Outdoor Education Trust that takes a modern approach to educating tourists and students on school camps.\nThe Discover Deep Cove application includes a map of Deep Cove, track activities, an interactive quiz and glossary of local flora and fauna. The website includes a content management system to manage the website and mobile application.",
         "description": "I  worked as part of a team of three students to develop a web and mobile application for the Deep Cove Outdoor Education trust. This was the capstone project for my Bachelor of Information Technology.\nThe project consists of two components, an Android application called Discover Deep Cove and a website that merged and replaced two websites operated by the Trust.\nThis application can be downloaded by clicking on ‘see project’ link below. Features include a knowledge base with photos and sound clips to help identify wildlife, quizzes, and an interactive map with activities linked to QR codes in the area.\nMy role as Lead Mobile Application Developer, meant that I was in charge of building the mobile application. My main area was developing and building the UI and UX in our chosen framework 'Flutter'\nThe Discover Deep Cove application can be downloaded by clicking on ‘see project’ link below. Features include a knowledge base with photos and sound clips to help identify wildlife, quizzes, and an interactive map with activities linked to QR codes in the area."
     },
+
     {
         "name": "Fight for Kidz",
         "images": [
             {
-                "src": "/dist/images/f4k-landing.png",
+                "src": "/dist/images/f4k-landing.jpg",
                 "caption": "Fight for Kidz landing page"
             }
         ],
@@ -64,8 +64,7 @@
         "client": "Fight for Kidz",
         "clientLogo": "/dist/images/f4k-logo.png",
         "aboutClient": "Fight for Kidz is a charity boxing event held in Southland raising funds for kid's charities. All funds raised stay in Southland. This event has been running since 2003 and raised almost $700,000.",
-        "moreInfo": "Projects/Fight-for-Kidz",
-        "tagline": "Web application and CMS for the Fight for Kidz charity boxing organization",
+        "short_description": "A web application and CMS built for the Fight for Kidz organization with the goal of being the main point of contact between the orgainzers and fighter, sponsors etc.\nThe Website displays information on upcoming and historic events as well as videos of the bouts ",
         "description": "I worked as part of a team of four students to develop a web application for Fight for Kidz, a non-profit organisation that runs a charity boxing events in Invercargill fundraising for charities that work with our most vulnerable children. This project was for a second year Project Management paper\nThe website features a content management system that allows Fight for Kidz to manage applications for each event, helping them streamline their processes and publicise their events.\nMy role as Junior Web Developer led to me working in part on various aspects of the website, including but not limited to design, responsiveness, back end and CMS.\nRecently, I have been helping to intergrate React into various aspects of the site to improve functionality and usability of the site"
     }
 ]
