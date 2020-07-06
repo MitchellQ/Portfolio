@@ -8,19 +8,11 @@ export default class SiteNav extends Component {
         this.state = require('../../data/sitenav.json');
     }
 
-    buildUrl(href) {
-        if(window.location.pathname == "/") {
-            return `#${href}`;
-        }
-
-        return `/#${href}`
-    }
-
     render() {
         const { brand, navItems } = this.state;
 
         const links = navItems.map((item, key) => {
-            return <NavLink href={this.buildUrl(item.href)} name={item.name} key={key} />
+            return <NavLink href={item.href} name={item.name} key={key} />
         });
 
         return (
@@ -52,14 +44,24 @@ class NavLink extends Component {
     static defaultProps = {
         href: "",
         name: ""
+    }    
+
+    buildUrl(href) {
+        if(window.location.pathname == "/") {
+            return `#${href}`;
+        }
+
+        return `/#${href}`
     }
 
     render() {
         const { href, name } = this.props;
 
+        let isFile = name == "Download CV";
+
         return <li>
-            <a href={href} className="js-scroll-trigger px-3" download={name == "Download CV"}>
-                {name == "Download CV" ? <i className="far fa-download pr-2"></i> : null}
+            <a href={isFile ? href : this.buildUrl(href)} className="js-scroll-trigger px-3" download={name == "Download CV"}>
+                {isFile ? <i className="far fa-download pr-2"></i> : null}
                 {name}
             </a>
         </li>
