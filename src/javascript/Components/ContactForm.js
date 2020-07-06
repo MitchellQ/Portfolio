@@ -27,7 +27,7 @@ export default class ContactForm extends React.Component {
     }
 
     componentDidMount() {
-        let apiUrl = "https://https://mailservice.samuelgrant.dev/"
+        let apiUrl = "https://mailservice.samuelgrant.dev/"
 
         $.ajax({
             method: 'get',
