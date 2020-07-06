@@ -4,6 +4,7 @@
         { "href": "about", "name": "About" },        
         { "href": "featured", "name": "Featured Projects" },
         { "href": "education", "name": "Education" },
+        { "href": "testimonials", "name": "Testimonials" },
         { "href": "/dist/files/Mitch Q CV.pdf", "name": "Download CV" },
         { "href": "contact", "name": "Contact" }
     ]
