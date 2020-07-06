@@ -5,13 +5,18 @@ export default class SiteNav extends Component {
     constructor(props) {
         super(props);
 
-        this.state = require('../../data/sitenav.json');
+        this.state = {
+            nav: require('../../data/siteNav.json'),
+            settings: require('../../data/siteSettings.json')
+        }
     }
 
     render() {
-        const { brand, navItems } = this.state;
+        const { brand, navItems } = this.state.nav;
 
         const links = navItems.map((item, key) => {
+            if(!this.state.settings.testimonialsVisible && item.name == "Testimonials") return;
+
             return <NavLink href={item.href} name={item.name} key={key} />
         });
 
