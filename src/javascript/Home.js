@@ -1,13 +1,12 @@
 import React, { Fragment } from "react";
 
+import Landing from "./Components/Landing";
 import About from "./About";
-import Project from "./Project";
 import FeaturedProjects from "./FeaturedProjects";
+import Education from './Education';
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
-import Education from './Education';
 
-import Landing from "./Components/Landing";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -40,7 +39,7 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const { testimonialsVisible, contactFormVisible } = this.state;
+    const { testimonialsVisible } = this.state;
 
     return (
       <Fragment>
@@ -49,7 +48,7 @@ export default class Home extends React.Component {
         <FeaturedProjects />
         <Education />
         {testimonialsVisible ? <Testimonials /> : null}
-        {contactFormVisible ? <Contact /> : null}
+        <Contact />
 
         <a href="#landing" className="scrollUp js-scroll-trigger"><i className="fa fa-chevron-up"></i></a>
       </Fragment>
