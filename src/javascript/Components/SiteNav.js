@@ -44,10 +44,10 @@ class NavLink extends Component {
     static defaultProps = {
         href: "",
         name: ""
-    }    
+    }
 
     buildUrl(href) {
-        if(window.location.pathname == "/") {
+        if (window.location.pathname == "/") {
             return `#${href}`;
         }
 
