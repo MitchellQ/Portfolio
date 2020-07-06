@@ -36,3 +36,21 @@
     float: right;
     height: 45px;
 }
+
+.featured-project-wrapper {
+	min-height: 400px;
+	height: auto;
+	transition: ease-in-out 1s;
+
+	.controls {
+		text-align: center;
+
+		@media(max-width: 992px) {
+			padding: 20px 0;
+		}
+
+		@media(min-width: 992px) {
+			top: 100px;
+		}
+	}
+}

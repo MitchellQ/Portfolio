@@ -8,11 +8,19 @@ export default class SiteNav extends Component {
         this.state = require('../../data/sitenav.json');
     }
 
+    buildUrl(href) {
+        if(window.location.pathname == "/") {
+            return `#${href}`;
+        }
+
+        return `/#${href}`
+    }
+
     render() {
         const { brand, navItems } = this.state;
 
         const links = navItems.map((item, key) => {
-            return <NavLink href={item.href} name={item.name} key={key} />
+            return <NavLink href={this.buildUrl(item.href)} name={item.name} key={key} />
         });
 
         return (
