@@ -14,9 +14,6 @@ import 'jquery.easing';
 import 'jquery-countdown';
 import 'aos';
 
-import './vendor/owl.carousel.min';
-import './vendor/jquery.fancybox.min';
-
 import './main';
 
 
