@@ -15,7 +15,7 @@ export default class SiteNav extends Component {
         const { brand, navItems } = this.state.nav;
 
         const links = navItems.map((item, key) => {
-            if(!this.state.settings.testimonialsVisible && item.name == "Testimonials") return;
+            if (!this.state.settings.testimonialsVisible && item.name == "Testimonials") return;
 
             return <NavLink href={item.href} name={item.name} key={key} />
         });
@@ -62,13 +62,14 @@ class NavLink extends Component {
     render() {
         const { href, name } = this.props;
 
-        let isFile = name == "Download CV";
-
-        return <li>
-            <a href={isFile ? href : this.buildUrl(href)} className="js-scroll-trigger px-3" download={name == "Download CV"}>
-                {isFile ? <i className="far fa-download pr-2"></i> : null}
+        if (name == "Download CV") {
+            return <a href={href} download>
+                <i className="far fa-download pr-2"></i> {name}
+            </a>
+        } else {
+            return <a href={this.buildUrl(href)} className="js-scroll-trigger px-3">
                 {name}
             </a>
-        </li>
+        }
     }
 }
