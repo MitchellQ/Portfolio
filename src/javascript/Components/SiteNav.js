@@ -64,7 +64,7 @@ class NavLink extends Component {
 
         if (name == "Download CV") {
             return <a href={href} download>
-                <i className="far fa-download pr-2"></i> {name}
+                <i className="far fa-download pr-2"/> {name}
             </a>
         } else {
             return <a href={this.buildUrl(href)} className="js-scroll-trigger px-3">
