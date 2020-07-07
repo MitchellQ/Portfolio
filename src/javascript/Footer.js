@@ -49,7 +49,7 @@ export default class Footer extends React.Component {
                             <div className="border-top pt-5">
                                 <HtmlComment text={"Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0."} />
                                 <p> Copyright © {new Date().getFullYear()} | This template is made with
-                                        <i className="icon-heart text-danger" aria-hidden="true" /> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    <i className="fas fa-heart px-1 text-danger"/>by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                                 </p>
                                 <HtmlComment text={"Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0."} />
                             </div>
