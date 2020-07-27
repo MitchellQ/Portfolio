@@ -40,7 +40,7 @@ export default class Project extends React.Component {
 				
 							<HtmlComment text="Project Sidebar" />
 							<div className="col-4">
-								<img src={project.clientLogo} alt="Image placeholder" className="img-fluid mb-4" />
+								<img src={project.clientLogo} alt="Client logo" className="img-fluid mb-4" />
 								<h3>{project.client}</h3>
 								<p className="pb-3">{project.aboutClient}</p>
 
