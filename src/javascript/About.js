@@ -40,12 +40,9 @@ export default class About extends React.Component {
                   <img
                     src="/dist/images/about.jpg"
                     alt="Image"
-                    className="img-fluid"
+                    className="img-fluid rounded"
                   />
                 </figure>
-                <div className="p-3">
-                  <h3>Mitchell Quarrie</h3>
-                </div>
               </div>
             </div>
             <div
