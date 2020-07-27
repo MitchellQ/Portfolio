@@ -127,40 +127,6 @@ body {
 	}
 }
 
-
-
-.site-footer {
-	padding: 4em 0;
-	background: #262626;
-	@include media-breakpoint-up(md) {
-		padding: 8em 0;	
-	}
-	.border-top {
-		border-top: 1px solid rgba(255,255,255,.1)!important;
-	}
-	p {
-		color: lighten($black, 60%); 
-	}
-	h2,h3,h4,h5 {
-		color: $white;
-	}
-	a {
-		color: lighten($black, 60%); 
-		&:hover {
-			color: lighten($black, 100%); 
-		}
-	}
-	ul {
-		li {
-			margin-bottom: 10px;
-		}
-	}
-	.footer-heading {
-		font-size: 16px;
-		color: $white;
-	}
-}
-
 .bg-text-line {
   display: inline;
   background: $black;
