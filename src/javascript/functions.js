@@ -6,7 +6,6 @@ export function sanitiseHtml(s) {
   return s.replace(/(&nbsp;|<([^>]+)>)/ig, "");
 }
 
-
 // JS smoothscroll function
 $(function () {
   $('.js-scroll-trigger').click(function () {
@@ -20,11 +19,6 @@ $(function () {
   });
 })
 
-// Closes responsive menu when a scroll trigger link is clicked
-$('.js-scroll-trigger').click(function () {
-  $('.navbar-collapse').collapse('hide');
-});
-
 // Activate scrollspy to add active class to navbar items on scroll
 $('body').scrollspy({
   target: '#sideNav'
@@ -36,5 +30,12 @@ $(function () {
 
   window.addEventListener('scroll', () => {
     window.pageYOffset > $(window).height() ? navbar.classList.add("scrolled") : navbar.classList.remove("scrolled");
+  });
+});
+
+// Checks to see if the navbar is exapnded and collapses it when the screen is scrolled
+$(function () {
+  window.addEventListener('scroll', () => {
+      $('.navbar-collapse').collapse('hide');
   });
 });
