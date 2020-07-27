@@ -1,5 +1,6 @@
 node_modules/
 dist/*
 !dist/images/
+!dist/files/
 npmrc
 .npmrc
