@@ -8,14 +8,14 @@ export default class ProjectCard extends React.Component {
     }
 
     render() {
-        if(!this.props.project) return null;
-        
+        if (!this.props.project) return null;
+
         const { images, name, short_description } = this.props.project;
-        
+
         return (
             <div className="row">
                 <div className="col-md-5 col-sm-12 pr-4">
-                    <img className="img-fluid" style={{height: "200px"}} src={images[0].src} alt={images[0].caption} />
+                    <img className="img-fluid" style={{ height: "200px" }} src={images[0].src} alt={images[0].caption} />
                 </div>
 
                 <div className="col-md-2 col-sm-12 controls">
@@ -31,9 +31,9 @@ export default class ProjectCard extends React.Component {
 
                 <div className="col-md-5 col-sm-12 pl-4">
                     <h4>{name}</h4>
-                    <p dangerouslySetInnerHTML={{__html: sanitiseHtml(short_description).replace(/\n/g, '</p><p>')}} />
+                    <p dangerouslySetInnerHTML={{ __html: sanitiseHtml(short_description).replace(/\n/g, '</p><p>') }} />
                     <a className="btn btn-primary" href={this.projectUrl(name)}>
-                        Case Study <i className=" pl-2 fas fa-chevron-right"/>
+                        Case Study <i className=" pl-2 fas fa-chevron-right" />
                     </a>
                 </div>
             </div>

@@ -35,9 +35,9 @@ export default class Captcha extends React.Component {
     };
 
     execute() {
-        if(!!this.props.requireReady && !this.state.ready) return;
+        if (!!this.props.requireReady && !this.state.ready) return;
 
-        if(this.state.code) {
+        if (this.state.code) {
             this.captcha.reset();
         }
 
@@ -45,9 +45,9 @@ export default class Captcha extends React.Component {
     }
 
     render() {
-        const {size, theme} = this.props;
+        const { size, theme } = this.props;
 
-        if(!this.props.sitekey) return null;
+        if (!this.props.sitekey) return null;
 
         return <Reaptcha
             ref={e => (this.captcha = e)}

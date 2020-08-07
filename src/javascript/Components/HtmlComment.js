@@ -21,7 +21,7 @@ export default class HtmlComment extends React.Component {
     createComment() {
         let text = this.props.text;
 
-        if(this.props.trim) {
+        if (this.props.trim) {
             text = text.trim();
         }
 

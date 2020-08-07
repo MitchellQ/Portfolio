@@ -4,7 +4,7 @@ import ContactForm from '../Components/Form/ContactForm';
 
 export default class Contact extends React.Component {
 
-  render() {      
+    render() {
         return (
             <section className="site-section bg-light aos-init aos-animate" id="contact" data-aos="fade">
                 <div className="container">
@@ -32,8 +32,8 @@ export default class Contact extends React.Component {
                         </div>
                     </div>
 
-                    <ContactForm/>
-                    
+                    <ContactForm />
+
                 </div>
             </section>
         );

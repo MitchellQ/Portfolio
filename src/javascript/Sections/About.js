@@ -14,7 +14,7 @@ export default class About extends React.Component {
 
     const icons = socialIcons ? socialIcons.map((icon, key) => {
       return <SocialIcon icon={icon.icon} href={icon.href} key={key} />
-    }) : null ;
+    }) : null;
 
     return (
       <div className="site-section cta-big-image" id="about">
@@ -52,7 +52,7 @@ export default class About extends React.Component {
               data-aos-delay="100"
             >
               <div className="mb-4">
-              <p dangerouslySetInnerHTML={{__html: sanitiseHtml(about).replace(/\n/g, '</p><p>')}} />
+                <p dangerouslySetInnerHTML={{ __html: sanitiseHtml(about).replace(/\n/g, '</p><p>') }} />
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ class SocialIcon extends React.Component {
 
     return (
       <li>
-        <a href={href} target={hrefTest.includes('/dist') ? '_blank' : '_self' } download={hrefTest.includes('/dist')} rel="noopener">
+        <a href={href} target={hrefTest.includes('/dist') ? '_blank' : '_self'} download={hrefTest.includes('/dist')} rel="noopener">
           <i className={icon}></i>
         </a>
       </li>

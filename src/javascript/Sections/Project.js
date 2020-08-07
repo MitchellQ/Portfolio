@@ -1,7 +1,7 @@
 import React from "react";
 
 import { sanitiseHtml } from "../functions";
-  
+
 import Techs from '../Components/Project/Techs.js';
 import Developers from '../Components/Project/Developers';
 import ProjectImage from '../Components/Project/ProjectImage';
@@ -35,23 +35,23 @@ export default class Project extends React.Component {
 					<div className="row mt-5">
 						<div className="col-md-8 blog-content">
 							<div className="row mb-5">{projectImages}</div>
-								<h2 className="pb-3">{project.name}</h2>
-								<p dangerouslySetInnerHTML={{ __html: sanitiseHtml(project.description).replace(/\n/g, "</p><p>")}} />
-							</div>
-				
-							<HtmlComment text="Project Sidebar" />
-							<div className="col">
-								<img src={project.clientLogo} alt="Client logo" className="img-fluid mb-4" />
-								<h3>{project.client}</h3>
-								<p className="pb-3">{project.aboutClient}</p>
+							<h2 className="pb-3">{project.name}</h2>
+							<p dangerouslySetInnerHTML={{ __html: sanitiseHtml(project.description).replace(/\n/g, "</p><p>") }} />
+						</div>
 
-								<Links urls={project.links} />
-								<Techs frameworks={project.frameworks} />
-								<Developers developers={project.developers} />
-							</div>
+						<HtmlComment text="Project Sidebar" />
+						<div className="col">
+							<img src={project.clientLogo} alt="Client logo" className="img-fluid mb-4" />
+							<h3>{project.client}</h3>
+							<p className="pb-3">{project.aboutClient}</p>
+
+							<Links urls={project.links} />
+							<Techs frameworks={project.frameworks} />
+							<Developers developers={project.developers} />
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 		);
 	}
 }

@@ -20,14 +20,14 @@ export class FormGroup extends Component {
 
         return (
             <div className={className || "form-group"}>
-                <label  htmlFor={htmlFor} required={!!required}>{label}</label>
+                <label htmlFor={htmlFor} required={!!required}>{label}</label>
                 {children}
             </div>
         )
     }
 }
 
-export class Input extends Component {  
+export class Input extends Component {
     constructor(props) {
         super(props);
 
@@ -42,18 +42,18 @@ export class Input extends Component {
         this.setState({
             value
         }, () => {
-            if(this.props.onChange) {
+            if (this.props.onChange) {
                 this.props.onChange(value)
             }
         });
     }
 
     getAutoComplete() {
-        if(AutoComplete.includes(this.props.autoComplete)) {
+        if (AutoComplete.includes(this.props.autoComplete)) {
             return this.props.autoComplete;
         }
 
-        switch(this.props.autoComplete) {
+        switch (this.props.autoComplete) {
             case 'phone':
                 return 'tel';
 
@@ -69,23 +69,23 @@ export class Input extends Component {
     }
 
     getType() {
-        if(!this.props.type) {
+        if (!this.props.type) {
             throw 'You must provide a type for an input field';
         }
 
-        if(Type.includes(this.props.type)) {
+        if (Type.includes(this.props.type)) {
             return this.props.type;
         }
-        
+
         return 'text';
     }
 
     render() {
-        const { id, className, name, placeHolder, 
+        const { id, className, name, placeHolder,
             autoFocus, disabled, minLength, maxLength, readOnly, required, tabIndex,
         } = this.props;
 
-        return <input 
+        return <input
             id={id || null}
             className={className || 'form-control'}
             type={this.getType()}
@@ -118,7 +118,7 @@ export class TextArea extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if(prevProps.value != this.props.value) {
+        if (prevProps.value != this.props.value) {
             this.setState({
                 value: this.props.value
             });
@@ -133,7 +133,7 @@ export class TextArea extends Component {
         }, () => {
             let onChange = this.props.onChange;
 
-            if(this.props.onChange) {
+            if (this.props.onChange) {
                 this.props.onChange(value)
             }
         });
@@ -141,12 +141,12 @@ export class TextArea extends Component {
 
     render() {
         const {
-            id, className, name, placeHolder, helper, 
+            id, className, name, placeHolder, helper,
             autoFocus, disabled, minLength, maxLength, readOnly, required, rows, tabIndex
         } = this.props;
 
         return (
-            <textarea 
+            <textarea
                 id={id || null}
                 className={className || 'form-control'}
                 placeholder={placeHolder || null}

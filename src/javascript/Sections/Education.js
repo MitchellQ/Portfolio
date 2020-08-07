@@ -12,16 +12,16 @@ export default class Education extends React.Component {
 
     const educationCards = education
       ? education.map((item, key) => {
-          return (
-            <EducationCard
-              icon={item.icon}
-              title={item.title}
-              location={item.location}
-              year={item.year}
-              key={key}
-            />
-          );
-        })
+        return (
+          <EducationCard
+            icon={item.icon}
+            title={item.title}
+            location={item.location}
+            year={item.year}
+            key={key}
+          />
+        );
+      })
       : null;
 
     return (

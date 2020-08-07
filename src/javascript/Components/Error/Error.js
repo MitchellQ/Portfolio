@@ -4,7 +4,7 @@ import HtmlComment from '../HtmlComment';
 
 export class NotFound extends React.Component {
     componentDidMount() {
-        document.title  = "Page Not Found"
+        document.title = "Page Not Found"
     }
 
     render() {
@@ -23,12 +23,12 @@ export class ServerError extends React.Component {
     }
 
     render() {
-        return(
-        <ErrorWrapper>
-            <i className="fad fa-bug fa-7x" />
-            <h2>Something Went Wrong</h2>
-            <p>please try again later</p>
-        </ErrorWrapper>
+        return (
+            <ErrorWrapper>
+                <i className="fad fa-bug fa-7x" />
+                <h2>Something Went Wrong</h2>
+                <p>please try again later</p>
+            </ErrorWrapper>
         )
     }
 }
@@ -46,7 +46,7 @@ class ErrorWrapper extends React.Component {
 
                         <div className="col-auto">
                             <a className="btn btn-dark" href="/dist/files/Mitch Q CV.pdf" download>
-                                <i className="fas fa-download"/> Get my Resume
+                                <i className="fas fa-download" /> Get my Resume
                             </a>
                         </div>
 
@@ -54,7 +54,7 @@ class ErrorWrapper extends React.Component {
 
                         <div className="col-auto">
                             <a className="btn btn-dark" href="/">
-                                <i className="fas fa-home"/> Go Home
+                                <i className="fas fa-home" /> Go Home
                             </a>
                         </div>
 

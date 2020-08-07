@@ -14,25 +14,25 @@ export default class Wrapper extends Component {
     render() {
         return (
             <BrowserRouter>
-            <ErrorBoundary>
-                <Spinner />                
-                <div className="site-wrap">
-                    <SiteNav />
+                <ErrorBoundary>
+                    <Spinner />
+                    <div className="site-wrap">
+                        <SiteNav />
 
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/Projects/:name" component={Project} />
-                        <Route component={NotFound} />
-                    </Switch>
-                    
-                    <Footer />
-                </div>
-            </ErrorBoundary>
+                        <Switch>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/Projects/:name" component={Project} />
+                            <Route component={NotFound} />
+                        </Switch>
+
+                        <Footer />
+                    </div>
+                </ErrorBoundary>
             </BrowserRouter>
         );
     }
 }
 
-if(document.getElementById('root')) {
+if (document.getElementById('root')) {
     render(<Wrapper />, document.getElementById('root'))
 }

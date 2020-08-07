@@ -82,57 +82,57 @@ export default class ContactForm extends React.Component {
         const { From, Message } = this.state.data;
         const { errors, success } = this.state;
 
-        return (            
+        return (
             this.state.apiUrl && this.state.reCaptchaKey ? (
                 <div className="row">
                     <div className="col-md-12 mb-5">
                         <form onSubmit={this.handleSubmit} className="px-5 py-3 bg-white">
-                            
+
                             <div className="row">
                                 <FormGroup className="form-group col-12 mb-3 mb-md-0">
                                     <Input type="name" placeHolder="Name" required
                                         autoComplete="name" value={this.state.email}
-                                        onChange={(val) => this.handleChange('From', {Name: val, Email: From.Email})}
+                                        onChange={(val) => this.handleChange('From', { Name: val, Email: From.Email })}
                                     />
-    
+
                                     <Messages errors={errors ? errors.Name : null} type="error" />
                                 </FormGroup>
-    
+
                                 <FormGroup className="form-group col-12 mb-3 mb-md-0">
                                     <Input type="email" placeHolder="Email" required
                                         autoComplete="email" value={this.state.Email}
-                                        onChange={(val) => this.handleChange('From', {Name: From.Name, Email: val})}
+                                        onChange={(val) => this.handleChange('From', { Name: From.Name, Email: val })}
                                     />
-    
+
                                     <Messages errors={errors ? errors.Email : null} type="error" />
                                 </FormGroup>
-    
+
                                 <FormGroup className="form-group col-12 mb-3 mb-md-0">
                                     <Input type="text" placeHolder="Subject"
                                         value={this.state.subject}
                                         onChange={this.handleChange.bind(this, 'Subject')}
                                     />
                                 </FormGroup>
-    
+
                                 <FormGroup className="form-group col-12">
                                     <TextArea placeHolder="Write your notes or questions here..." required
                                         value={this.state.message} cols="30" rows="7"
                                         onChange={this.handleChange.bind(this, 'Message')}
                                     />
-    
+
                                     <Messages errors={errors ? errors.Message : null} type="error" />
                                 </FormGroup>
-    
+
                                 <Captcha onRef={reCaptcha => (this.reCaptcha = reCaptcha)} theme={'light'} size={'normal'}
                                     sitekey={this.state.reCaptchaKey} requireReady={false} onVerified={this.onVerified}
                                 />
-    
+
                                 <div className="col-md-12">
                                     <Button className="btn btn-primary btn-md text-white mt-3" disabled={!this.state.data.CaptchaCode && !!this.state.reCaptchaKey} pending={false}>
                                         <i className="fas fa-envelope mr-2" /> Send Email
                                     </Button>
                                 </div>
-    
+
                                 {/* Toast container */}
                                 <ToastContainer
                                     position="top-right"
@@ -146,7 +146,7 @@ export default class ContactForm extends React.Component {
                         </form>
                     </div>
                 </div>
-            ): null           
+            ) : null
         );
     }
 }
@@ -173,11 +173,11 @@ class Button extends React.Component {
         const { id, children, className, disabled, pending, readOnly } = this.props;
 
         return <button id={id || null} className={className} disabled={!!disabled || !!pending} readOnly={!!readOnly}>
-            { !pending ? children : (
-            <React.Fragment>
-                <span class="sr-only">Loading...</span>
-                <i className="fas fa-spinner fa-spin"/>
-            </React.Fragment>
+            {!pending ? children : (
+                <React.Fragment>
+                    <span class="sr-only">Loading...</span>
+                    <i className="fas fa-spinner fa-spin" />
+                </React.Fragment>
             )}
         </button>
     }

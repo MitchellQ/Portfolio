@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default class TestimonialCard extends React.Component {
-    render() {
-		if(!this.props.testimonial) return null;
-        
+	render() {
+		if (!this.props.testimonial) return null;
+
 		const { content, author, image } = this.props.testimonial;
 
 		return (

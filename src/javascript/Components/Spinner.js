@@ -3,7 +3,7 @@ import React from 'react';
 export default class Spinner extends React.Component {
     componentDidMount() {
         $(".loader").delay(1000).fadeOut("slow");
-        $("#overlayer").delay(1000).fadeOut("slow");	
+        $("#overlayer").delay(1000).fadeOut("slow");
     }
 
     render() {

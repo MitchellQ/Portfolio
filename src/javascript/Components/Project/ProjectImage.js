@@ -12,8 +12,8 @@ export default class ProjectImage extends React.Component {
 		return (
 			<div className="col-lg-6">
 				<figure>
-                    <img src={src} style={{height: "200px"}} alt="Image" className="img-fluid" />
-                    <figcaption>{caption}</figcaption>
+					<img src={src} style={{ height: "200px" }} alt="Image" className="img-fluid" />
+					<figcaption>{caption}</figcaption>
 				</figure>
 			</div>
 		);

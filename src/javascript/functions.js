@@ -36,6 +36,6 @@ $(function () {
 // Checks to see if the navbar is exapnded and collapses it when the screen is scrolled
 $(function () {
   window.addEventListener('scroll', () => {
-      $('.navbar-collapse').collapse('hide');
+    $('.navbar-collapse').collapse('hide');
   });
 });
