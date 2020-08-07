@@ -1,4 +1,5 @@
 import React from 'react';
+
 import HtmlComment from '../HtmlComment';
 
 export class NotFound extends React.Component {

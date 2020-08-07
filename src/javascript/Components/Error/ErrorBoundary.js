@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { DeveloperError } from './Error';
 
 export default class ErrorBoundary extends React.Component {

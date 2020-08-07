@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import Landing from "./Components/Landing";
 import About from "./Sections/About";
@@ -42,7 +42,7 @@ export default class Home extends React.Component {
     const { testimonialsVisible } = this.state;
 
     return (
-      <Fragment>
+      <React.Fragment>
         <Landing />
         <About />
         <FeaturedProjects />
@@ -51,7 +51,7 @@ export default class Home extends React.Component {
         <Contact />
 
         <a href="#landing" className="scrollUp js-scroll-trigger"><i className="fa fa-chevron-up"></i></a>
-      </Fragment>
+      </React.Fragment>
     );
   }
 }

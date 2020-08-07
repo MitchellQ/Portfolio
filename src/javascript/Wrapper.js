@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import ErrorBoundary from './Components/Error/ErrorBoundary';
 import Spinner from './Components/Spinner';
@@ -9,7 +10,7 @@ import Footer from './Sections/Footer';
 import { NotFound } from './Components/Error/Error';
 import Project from './Sections/Project';
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 
 export default class Wrapper extends Component {
     render() {

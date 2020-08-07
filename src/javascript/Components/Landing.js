@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 import { sanitiseHtml } from '../functions';
 
-export default class Landing extends Component {
+export default class Landing extends React.Component {
     constructor(props) {
         super(props);
 

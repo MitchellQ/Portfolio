@@ -1,4 +1,5 @@
 import React from "react";
+
 import { sanitiseHtml } from '../functions'
 
 export default class About extends React.Component {

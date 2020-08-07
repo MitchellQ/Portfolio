@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 export default class Links extends React.Component {
 	render() {
@@ -38,13 +38,13 @@ export default class Links extends React.Component {
 		) : null;
 
 		return (
-		<Fragment>
+		<React.Fragment>
 				<div className="my-3">{btn}</div>
 				<div>
 				{google_btn}
 				{apple_btn}
 				</div>
-			</Fragment>
+			</React.Fragment>
 		);
 	}
 }

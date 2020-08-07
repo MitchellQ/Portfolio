@@ -1,4 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
+
 import { sanitiseHtml } from "../functions";
   
 import Techs from '../Components/Project/Techs.js';

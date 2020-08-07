@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
+
 import HtmlComment from './HtmlComment';
 
-export default class SiteNav extends Component {
+export default class SiteNav extends React.Component {
     constructor(props) {
         super(props);
 
@@ -21,7 +22,7 @@ export default class SiteNav extends Component {
         });
 
         return (
-            <Fragment>
+            <React.Fragment>
                 <HtmlComment text={"Nav"} />
                 <nav className="navbar navbar-expand-md stickty-top px-5" >
                     <div className="container-fluid">
@@ -40,12 +41,12 @@ export default class SiteNav extends Component {
                         </ul>
                     </div>
                 </nav>
-            </Fragment>
+            </React.Fragment>
         )
     }
 }
 
-class NavLink extends Component {
+class NavLink extends React.Component {
     static defaultProps = {
         href: "",
         name: ""
