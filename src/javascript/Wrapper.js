@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-import ErrorBoundary from './Components/ErrorBoundary';
+import ErrorBoundary from './Components/Error/ErrorBoundary';
 import Spinner from './Components/Spinner';
 import SiteNav from './Components/SiteNav';
 import Home from './Home';
-import Footer from './Footer';
-import { NotFound } from './Components/Error';
-import Project from './Project';
+import Footer from './Sections/Footer';
+import { NotFound } from './Components/Error/Error';
+import Project from './Sections/Project';
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 

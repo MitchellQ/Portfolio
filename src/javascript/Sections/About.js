@@ -1,11 +1,11 @@
 import React from "react";
-import { sanitiseHtml } from '../javascript/functions'
+import { sanitiseHtml } from '../functions'
 
 export default class About extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = require("../data/about.json");
+    this.state = require("../../data/about.json");
   }
 
   render() {

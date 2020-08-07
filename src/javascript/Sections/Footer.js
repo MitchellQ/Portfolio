@@ -1,11 +1,11 @@
 import React from 'react';
-import SocialIcon from './Components/SocialIcon';
+import SocialIcon from '../Components/SocialIcon';
 
 export default class Footer extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = require("../data/about.json");
+        this.state = require("../../data/about.json");
     }
     render() {
         const { socialIcons } = this.state;

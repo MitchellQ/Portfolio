@@ -4,7 +4,7 @@ export default class Education extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = require("../data/education.json");
+    this.state = require("../../data/education.json");
   }
 
   render() {

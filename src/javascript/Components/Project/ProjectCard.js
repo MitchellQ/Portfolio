@@ -1,5 +1,5 @@
 import React from 'react';
-import { sanitiseHtml } from '../functions'
+import { sanitiseHtml } from '../../functions'
 
 export default class ProjectCard extends React.Component {
     projectUrl(url) {

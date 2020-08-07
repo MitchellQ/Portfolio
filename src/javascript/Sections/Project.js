@@ -1,19 +1,19 @@
 import React, { Fragment } from "react";
-import { sanitiseHtml } from "../javascript/functions";
+import { sanitiseHtml } from "../functions";
   
-import Techs from './Project/Techs.js';
-import Developers from './Project/Developers';
-import ProjectImage from './Project/ProjectImage';
-import Links from './Project/Links';
+import Techs from '../Components/Project/Techs.js';
+import Developers from '../Components/Project/Developers';
+import ProjectImage from '../Components/Project/ProjectImage';
+import Links from '../Components/Project/Links';
 
-import HtmlComment from './Components/HtmlComment.js'
+import HtmlComment from '../Components/HtmlComment.js'
 
 export default class Project extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			project: require("../data/projects.json"),
+			project: require("../../data/projects.json"),
 		};
 	}
 

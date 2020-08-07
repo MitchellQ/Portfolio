@@ -1,12 +1,12 @@
 import React from "react";
-import TestimonialCard from './Components/TestimonialCard';
+import TestimonialCard from '../Components/TestimonialCard';
 
 export default class Testimonials extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			testimonials: require("../data/testimonials.json"),
+			testimonials: require("../../data/testimonials.json"),
 			index: 0
 		}
 

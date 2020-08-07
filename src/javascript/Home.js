@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 
 import Landing from "./Components/Landing";
-import About from "./About";
-import FeaturedProjects from "./FeaturedProjects";
-import Education from './Education';
-import Testimonials from "./Testimonials";
-import Contact from "./Contact";
+import About from "./Sections/About";
+import FeaturedProjects from "./Sections/FeaturedProjects";
+import Education from './Sections/Education'
+import Testimonials from "./Sections/Testimonials";
+import Contact from "./Sections/Contact";
 
 
 export default class Home extends React.Component {

@@ -1,12 +1,12 @@
 import React from "react";
-import ProjectCard from "./Components/ProjectCard";
-import HtmlComment from './Components/HtmlComment';
+import ProjectCard from "../Components/Project/ProjectCard";
+import HtmlComment from '../Components/HtmlComment';
 
 export default class ProjectCards extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			projects: require("../data/projects.json"),
+			projects: require("../../data/projects.json"),
 			index: 0
 		}
 
