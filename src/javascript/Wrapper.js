@@ -10,8 +10,6 @@ import Footer from './Sections/Footer';
 import { NotFound } from './Components/Error/Error';
 import Project from './Sections/Project';
 
-
-
 export default class Wrapper extends Component {
     render() {
         return (
