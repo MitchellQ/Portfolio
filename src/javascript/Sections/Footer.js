@@ -24,7 +24,7 @@ export default class Footer extends React.Component {
                         </div>
                         <div className="col-12">
                             <div className="border-top pt-3">
-                                <p>Mitchell Quarrie Dev &copy; {new Date().getFullYear()}</p>
+                                <p>Mitchell Quarrie &copy; {new Date().getFullYear()}</p>
                             </div>
                         </div>
                     </div>
