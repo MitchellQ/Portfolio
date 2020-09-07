@@ -1,7 +1,5 @@
 import React from 'react';
 
-import HtmlComment from '../HtmlComment';
-
 export class NotFound extends React.Component {
     componentDidMount() {
         document.title = "Page Not Found"
@@ -41,25 +39,22 @@ class ErrorWrapper extends React.Component {
                     {this.props.children}
 
                     <div className="row  mt-5">
-                        <HtmlComment text="Empty column to horizontally centre content" />
-                        <div className="col"></div>
+                        <div className="col">
 
-                        <div className="col-auto">
-                            <a className="btn btn-dark" href="/dist/files/Mitch Q CV.pdf" download>
-                                <i className="fas fa-download" /> Get my Resume
+                            <div className="col-auto my-1">
+                                <a className="btn btn-dark" href="/dist/files/Mitch Q CV.pdf" download>
+                                    <i className="fas fa-download" /> Get my Resume
                             </a>
-                        </div>
+                            </div>
 
-                        <h5 className="col-auto pt-2">OR</h5>
+                            <h5 className="col-auto pt-2">OR</h5>
 
-                        <div className="col-auto">
-                            <a className="btn btn-dark" href="/">
-                                <i className="fas fa-home" /> Go Home
+                            <div className="col-auto my-1">
+                                <a className="btn btn-dark" href="/">
+                                    <i className="fas fa-home" /> Go Home
                             </a>
+                            </div>
                         </div>
-
-                        <HtmlComment text="Empty column to horizontally centre content" />
-                        <div className="col"></div>
                     </div>
                 </div>
             </div>
