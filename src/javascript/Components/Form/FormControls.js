@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const Type = ['email', 'password', 'url', 'number', 'tel', 'hidden'];
 
@@ -14,7 +14,7 @@ const AutoComplete = [
     "street-address", "address-line1", "address-line2", "address-level1", "address-level2", "address-level3", "address-level4", "country", "country-name", "postal-code",
 ]
 
-export class FormGroup extends Component {
+export class FormGroup extends React.Component {
     render() {
         const { children, className, htmlFor, label, required } = this.props;
 

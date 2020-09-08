@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -10,7 +10,7 @@ import Footer from './Sections/Footer';
 import { NotFound } from './Components/Error/Error';
 import Project from './Sections/Project';
 
-export default class Wrapper extends Component {
+export default class Wrapper extends React.Component {
     render() {
         return (
             <React.Fragment>
@@ -28,11 +28,10 @@ export default class Wrapper extends Component {
                             <Route component={NotFound} />
                         </Switch>
 
-
                     </ErrorBoundary>
                 </BrowserRouter>
                 </div>
-                
+
                 <Footer />
 
             </React.Fragment>
