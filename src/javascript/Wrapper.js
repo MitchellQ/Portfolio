@@ -13,10 +13,13 @@ import Project from './Sections/Project';
 export default class Wrapper extends Component {
     render() {
         return (
-            <BrowserRouter>
-                <ErrorBoundary>
-                    <Spinner />
-                    <div className="site-wrap">
+            <React.Fragment>
+
+                <div className="expander">
+                <BrowserRouter>
+                    <ErrorBoundary>
+                        <Spinner />
+
                         <SiteNav />
 
                         <Switch>
@@ -25,10 +28,14 @@ export default class Wrapper extends Component {
                             <Route component={NotFound} />
                         </Switch>
 
-                        <Footer />
-                    </div>
-                </ErrorBoundary>
-            </BrowserRouter>
+
+                    </ErrorBoundary>
+                </BrowserRouter>
+                </div>
+                
+                <Footer />
+
+            </React.Fragment>
         );
     }
 }

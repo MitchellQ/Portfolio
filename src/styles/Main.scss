@@ -52,3 +52,8 @@
 	opacity: 1;
 	transform: translateY(-55px);
 }
+
+.expander {
+	height: auto;
+	min-height: calc(100vh - 164px);
+}
