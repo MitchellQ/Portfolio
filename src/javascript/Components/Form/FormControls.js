@@ -27,7 +27,7 @@ export class FormGroup extends React.Component {
     }
 }
 
-export class Input extends Component {
+export class Input extends React.Component {
     constructor(props) {
         super(props);
 
@@ -109,7 +109,7 @@ export class Input extends Component {
         />
     }
 }
-export class TextArea extends Component {
+export class TextArea extends React.Component {
     constructor(props) {
         super(props);
 
