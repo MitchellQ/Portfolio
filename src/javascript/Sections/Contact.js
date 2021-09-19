@@ -19,7 +19,7 @@ export default class Contact extends React.Component {
                                 <span className="d-block h4 text-accent">
                                     <i className="far fa-map-marker"></i>
                                 </span>
-                                <span>Invercargill, New Zealand</span>
+                                <a href="https://goo.gl/maps/Xi44jSDyYt2Kn535A">Christchurch, New Zealand</a>
                             </p>
                         </div>
                         <div className="col-md-6 text-center">
