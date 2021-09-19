@@ -1,69 +1,73 @@
-name: Docker
+name: Publish Docker Container
 
 on:
   push:
-    # Publish `master` as Docker `latest` image.
-    branches:
-      - master
-
-    # Publish `v1.2.3` tags as releases.
+    # Tag the image with :latest if a commit is made to main
+    branches: [ main, dev ]
     tags:
       - v*
 
   # Run tests for any PRs.
   pull_request:
-
-env:
-  # TODO: Change variable to your image's name.
-  IMAGE_NAME: portfolio
-  NPM_TOKEN: ${{secrets.NPM_TOKEN}} 
+  
+  # Allows this workflow to run manually
+  workflow_dispatch:
 
 jobs:
-  # Run tests.
-  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
-  test:
+  tests:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-      - name: Run tests
-        run: |
-          if [ -f docker-compose.test.yml ]; then
-            docker-compose --file docker-compose.test.yml build
-            docker-compose --file docker-compose.test.yml run sut
-          else
-            docker build --build-arg NPM_TOKEN=$NPM_TOKEN . --file Dockerfile
-          fi
-  # Push image to GitHub Packages.
-  # See also https://docs.docker.com/docker-hub/builds/
+      - name: "Test: docker build"
+        run: docker build --build-arg NPM_TOKEN=${{secrets.NPM_TOKEN}} . --file Dockerfile
+          
+  release:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    needs: tests
+
+    steps:   
+      - uses: actions/checkout@v2
+      - name: docker build
+        run: docker build --build-arg NPM_TOKEN=${{secrets.NPM_TOKEN}} . --file Dockerfile
+        
+      
+
   push:
     # Ensure test job passes before pushing image.
-    needs: test
-
+    needs: tests
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build image
-        run: docker build --build-arg NPM_TOKEN=$NPM_TOKEN . --file Dockerfile --tag $IMAGE_NAME
-
-      - name: Log into registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-
-      - name: Push image
+      
+      # Authenticate with GitHub Container Registry
+      - name: docker login
+        run: docker echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      
+      # Build the docker image
+      - name: docker build
+        run: docker build --build-arg NPM_TOKEN=$NPM_TOKEN . --file Dockerfile --tag dockr_img
+        
+      # Docker push
+      - name: docker login
         run: |
-          IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
+          IMAGE_URL=ghcr.io/${{ github.repository }}
           
-          # Change all uppercase to lowercase
-          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-          # Strip git ref prefix from version
+          # Change all uppercase characters to lowercase
+          IMAGE_URL=$(echo $IMAGE_URL | tr '[A-Z]' '[a-z]')
+          
+          # Get the branch name
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-          # Strip "v" prefix from tag name
-          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-          # Use Docker `latest` tag convention
-          [ "$VERSION" == "master" ] && VERSION=latest
-          echo IMAGE_ID=$IMAGE_ID
-          echo VERSION=$VERSION
-          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
-          docker push $IMAGE_ID:$VERSION
+          
+          # Strip the 'v' prefix from tag names
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')          
+          
+          # If the branch is 'main' change the tag to 'latest' per the docker convention
+          [ "$VERSION" == "main" ] && VERSION=latest
+          
+          # Publish the image
+          echo destination_url=$IMAGE_URL:$VERSION
+          docker tag dockr_img $IMAGE_URL:$VERSION
+          docker push $IMAGE_URL:$VERSION
