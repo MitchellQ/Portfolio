@@ -1,6 +1,12 @@
 {
     "education": [
         {
+            "icon": "far fa-brackets-curly",
+            "title": "Certificate in Applied Technology Product Development Essentials",
+            "location": "Mission Ready HQ",
+            "year": "2022 - Current"
+        },
+        {
             "icon": "far fa-graduation-cap",
             "title": "Bachelor of Information Technology",
             "location": "Southern Institute of Technology",
