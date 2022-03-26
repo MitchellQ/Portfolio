@@ -8,7 +8,6 @@ WORKDIR /app
 
 # Copy NPM package files
 COPY package.json .
-COPY .npmrc .
 
 # RUN npm install
 RUN npm cache clean --force
@@ -18,7 +17,6 @@ RUN npm install
 # and build a production build
 COPY . .
 RUN npm run production
-RUN rm -r .npmrc
 
 # Setup an HTTPD server
 FROM node:12.14.0

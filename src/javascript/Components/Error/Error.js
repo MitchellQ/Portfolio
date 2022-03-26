@@ -43,8 +43,8 @@ class ErrorWrapper extends React.Component {
 
                             <div className="col-auto my-1">
                                 <a className="btn btn-dark" href="/dist/files/Mitch Q CV.pdf" download>
-                                    <i className="fas fa-download" /> Get my Resume
-                            </a>
+                                    <i className="fas fa-file-download" /> Get my Resume
+                                </a>
                             </div>
 
                             <h5 className="col-auto pt-2">OR</h5>
@@ -52,7 +52,7 @@ class ErrorWrapper extends React.Component {
                             <div className="col-auto my-1">
                                 <a className="btn btn-dark" href="/">
                                     <i className="fas fa-home" /> Go Home
-                            </a>
+                                </a>
                             </div>
                         </div>
                     </div>

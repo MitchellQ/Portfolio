@@ -1,29 +1,30 @@
 .site-footer {
-    background-color: #262626;
-    padding: 15px 0px;
-    
-    .border-top {
-		border-top: 1px solid rgba(255,255,255,.1)!important;
-    }
-    
-	p { color: lighten($black, 50%); }
+  background-color: #262626;
+  padding: 15px 0px;
 
-    i {
-        color: lighten($black, 50%);
-        font-size: 20px;
-        text-align: center;
-        text-decoration: none;        
-        margin: 0px 10px;
-        padding: 10px;
-        width: 15;                
-        border-radius: 50%;
-        border: solid 0.5px lighten($black, 50%);        
-        transition: ease-in-out 0.3s;
-    }
+  .border-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
 
-    i:hover {
-        color: whitesmoke!important;
-        background: darken($primary, 7.5%);
-        border-color: darken($primary, 7.5%);
-    }
+  p {
+    color: lighten($black, 50%);
+  }
+
+  i {
+    color: lighten($black, 50%);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 9px 11px;
+    border-radius: 50%;
+    border: solid 0.5px lighten($black, 50%);
+    transition: ease-in-out 0.3s;
+  }
+
+  i:hover {
+    color: whitesmoke !important;
+    background: darken($primary, 7.5%);
+    border-color: darken($primary, 7.5%);
+  }
 }
