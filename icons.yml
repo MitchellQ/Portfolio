@@ -1,0 +1,234 @@
+angle-double-left:
+  changes:
+    - '3'
+    - 5.0.0
+  label: Angle Double Left
+  search:
+    terms:
+      - arrows
+      - back
+      - caret
+      - laquo
+      - previous
+      - quote
+  styles:
+    - solid
+    - regular
+    - light
+    - duotone
+  unicode: f100
+  voted: false
+angle-double-right:
+  changes:
+    - '3'
+    - 5.0.0
+  label: Angle Double Right
+  search:
+    terms:
+      - arrows
+      - caret
+      - forward
+      - more
+      - next
+      - quote
+      - raquo
+  styles:
+    - solid
+    - regular
+    - light
+    - duotone
+  unicode: f101
+  voted: false
+angle-up:
+  changes:
+    - '3'
+    - 5.0.0
+  label: angle-up
+  search:
+    terms:
+      - arrow
+      - caret
+      - collapse
+      - upload
+  styles:
+    - light
+    - duotone
+    - regular
+    - solid
+  unicode: f106
+  voted: false
+brackets-curly:
+  changes:
+    - 5.7.0
+  label: Curly Brackets
+  search:
+    terms:
+      - code
+      - developer
+      - development
+      - parentheses
+  styles:
+    - solid
+    - regular
+    - light
+    - duotone
+  unicode: f7ea
+  voted: true
+envelope:
+  changes:
+    - '2'
+    - 5.0.0
+    - 5.10.1
+    - 5.10.2
+  label: Envelope
+  search:
+    terms:
+      - e-mail
+      - email
+      - letter
+      - mail
+      - message
+      - notification
+      - support
+  styles:
+    - solid
+    - regular
+    - light
+    - duotone
+  unicode: f0e0
+  voted: false
+file-download:
+  changes:
+    - 5.1.0
+    - 5.10.2
+  label: File Download
+  search:
+    terms:
+      - document
+      - export
+      - save
+  styles:
+    - solid
+    - regular
+    - light
+    - duotone
+  unicode: f56d
+  voted: true
+github:
+  changes:
+    - '2'
+    - 5.0.0
+  label: GitHub
+  search:
+    terms:
+      - octocat
+  styles:
+    - brands
+  unicode: f09b
+  voted: false
+graduation-cap:
+  changes:
+    - '4.1'
+    - 5.0.0
+    - 5.2.0
+    - 5.10.1
+  label: Graduation Cap
+  search:
+    terms:
+      - ceremony
+      - college
+      - graduate
+      - learning
+      - school
+      - student
+  styles:
+    - solid
+    - regular
+    - light
+    - duotone
+  unicode: f19d
+  voted: false
+linkedin:
+  changes:
+    - '1'
+    - 5.0.0
+  label: LinkedIn
+  search:
+    terms:
+      - linkedin-square
+  styles:
+    - brands
+  unicode: f08c
+  voted: false
+map-marker:
+  changes:
+    - '1'
+    - 5.0.0
+  label: map-marker
+  search:
+    terms:
+      - address
+      - coordinates
+      - destination
+      - gps
+      - localize
+      - location
+      - map
+      - navigation
+      - paper
+      - pin
+      - place
+      - point of interest
+      - position
+      - route
+      - travel
+  styles:
+    - solid
+    - regular
+    - light
+    - duotone
+  unicode: f041
+  voted: false
+plane:
+  changes:
+    - '1'
+    - 5.0.0
+    - 5.0.13
+  label: plane
+  search:
+    terms:
+      - airplane
+      - destination
+      - fly
+      - location
+      - mode
+      - travel
+      - trip
+  styles:
+    - solid
+    - regular
+    - light
+    - duotone
+  unicode: f072
+  voted: false
+tools:
+  changes:
+    - 5.6.0
+    - 5.10.2
+  label: Tools
+  search:
+    terms:
+      - admin
+      - fix
+      - repair
+      - screwdriver
+      - settings
+      - tools
+      - wrench
+  styles:
+    - solid
+    - regular
+    - light
+    - duotone
+  unicode: f7d9
+  voted: true
