@@ -1,6 +1,5 @@
 # STAGE ONE: Build our React APP
 FROM node:12.14.0 as build
-ARG NPM_TOKEN
 
 USER root
 
