@@ -32,7 +32,7 @@ export default class SiteNav extends React.Component {
                     </div>
 
                     <button className="navbar-toggler p-2" type="button" data-toggle="collapse" data-target="#responsiveNav">
-                        <span><i className="fas fa-bars menu-icon" /></span>
+                        <span><i className="fal fa-bars menu-icon" /></span>
                     </button>
 
                     <div className="collapse navbar-collapse" style={{ whiteSpace: "nowrap" }} id="responsiveNav">
@@ -65,7 +65,7 @@ class NavLink extends React.Component {
 
         if (name == "Download CV") {
             return <a href={href} className="px-3" download>
-                {name}  <i className="far fa-file-download pl-2" />
+                {name} <i className="fal fa-file-download" />
             </a>
         } else {
             return <a href={this.buildUrl(href)} className="js-scroll-trigger px-3">

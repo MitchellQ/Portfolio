@@ -17,7 +17,7 @@ export default class Contact extends React.Component {
                         <div className="col-md-6 text-center">
                             <p className="mb-4">
                                 <span className="d-block h4 text-accent">
-                                    <i className="far fa-map-marker"></i>
+                                    <i className="fal fa-map-marker"></i>
                                 </span>
                                 <a href="https://goo.gl/maps/Xi44jSDyYt2Kn535A">Christchurch, New Zealand</a>
                             </p>
@@ -25,7 +25,7 @@ export default class Contact extends React.Component {
                         <div className="col-md-6 text-center">
                             <p className="mb-0">
                                 <span className="d-block h4 text-accent">
-                                    <i className="far fa-envelope"></i>
+                                    <i className="fal fa-envelope"></i>
                                 </span>
                                 <a href="mailto:mitch@mitchellq.dev">mitch@mitchellq.dev</a>
                             </p>
