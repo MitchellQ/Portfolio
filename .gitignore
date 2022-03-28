@@ -3,3 +3,4 @@ dist/*
 !dist/images/
 !dist/files/
 !dist/*.ico
+!dist/FontAwesome/
