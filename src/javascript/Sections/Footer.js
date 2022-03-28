@@ -20,7 +20,7 @@ export default class Footer extends React.Component {
                 <div className="container">
                     <div className="row text-center">
                         <div className="col-12 social p-3">
-                            <div class="fa-3x">
+                            <div className="fa-3x">
                                 {icons}
                             </div>
                         </div>
