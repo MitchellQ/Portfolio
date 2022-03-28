@@ -61,6 +61,9 @@
 .fad.fa-brackets-curly:after {
   content: "\10f7ea"; }
 
+.fad.fa-circle:after {
+  content: "\10f111"; }
+
 .fad.fa-envelope:after {
   content: "\10f0e0"; }
 
@@ -73,8 +76,8 @@
 .fad.fa-map-marker:after {
   content: "\10f041"; }
 
-.fad.fa-plane:after {
-  content: "\10f072"; }
+.fad.fa-plane-alt:after {
+  content: "\10f3de"; }
 
 .fad.fa-tools:after {
   content: "\10f7d9"; }

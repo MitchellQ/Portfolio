@@ -201,6 +201,9 @@ readers do not read off random characters that represent icons */
 .fa-brackets-curly:before {
   content: "\f7ea"; }
 
+.fa-circle:before {
+  content: "\f111"; }
+
 .fa-envelope:before {
   content: "\f0e0"; }
 
@@ -213,14 +216,14 @@ readers do not read off random characters that represent icons */
 .fa-graduation-cap:before {
   content: "\f19d"; }
 
-.fa-linkedin:before {
-  content: "\f08c"; }
+.fa-linkedin-in:before {
+  content: "\f0e1"; }
 
 .fa-map-marker:before {
   content: "\f041"; }
 
-.fa-plane:before {
-  content: "\f072"; }
+.fa-plane-alt:before {
+  content: "\f3de"; }
 
 .fa-tools:before {
   content: "\f7d9"; }
@@ -312,6 +315,9 @@ readers do not read off random characters that represent icons */
 .fad.fa-brackets-curly:after {
   content: "\10f7ea"; }
 
+.fad.fa-circle:after {
+  content: "\10f111"; }
+
 .fad.fa-envelope:after {
   content: "\10f0e0"; }
 
@@ -324,8 +330,8 @@ readers do not read off random characters that represent icons */
 .fad.fa-map-marker:after {
   content: "\10f041"; }
 
-.fad.fa-plane:after {
-  content: "\10f072"; }
+.fad.fa-plane-alt:after {
+  content: "\10f3de"; }
 
 .fad.fa-tools:after {
   content: "\10f7d9"; }
