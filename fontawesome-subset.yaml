@@ -52,10 +52,40 @@ icons:
       - brands
   - file-download:
       - solid
+      - light
+      - duotone
+      - regular
+  - map-marker:
+      - solid
       - regular
       - light
       - duotone
-  - map-marker:
+  - home:
+      - solid
+      - regular
+      - light
+      - duotone
+  - angle-right:
+      - solid
+      - regular
+      - light
+      - duotone
+  - bars:
+      - solid
+      - regular
+      - light
+      - duotone
+  - spinner:
+      - solid
+      - regular
+      - light
+      - duotone
+  - bug:
+      - solid
+      - regular
+      - light
+      - duotone
+  - sad-tear:
       - solid
       - regular
       - light
