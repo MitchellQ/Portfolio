@@ -50,7 +50,7 @@ export default class Home extends React.Component {
         {testimonialsVisible ? <Testimonials /> : null}
         <Contact />
 
-        <a href="#landing" className="scrollUp js-scroll-trigger"><i className="fa fa-angle-up"></i></a>
+        <a href="#landing" className="scrollUp js-scroll-trigger"><i className="fal fa-angle-up"></i></a>
       </React.Fragment>
     );
   }

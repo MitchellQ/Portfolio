@@ -129,7 +129,7 @@ export default class ContactForm extends React.Component {
 
                                 <div className="col-md-12">
                                     <Button className="btn btn-primary btn-md text-white mt-3" disabled={!this.state.data.CaptchaCode && !!this.state.reCaptchaKey} pending={false}>
-                                        <i className="fas fa-envelope mr-2" /> Send Email
+                                        <i className="fal fa-envelope mr-2" /> Send Email
                                     </Button>
                                 </div>
 
@@ -176,7 +176,7 @@ class Button extends React.Component {
             {!pending ? children : (
                 <React.Fragment>
                     <span class="sr-only">Loading...</span>
-                    <i className="fas fa-spinner fa-spin" />
+                    <i className="fal fa-spinner fa-spin" />
                 </React.Fragment>
             )}
         </button>

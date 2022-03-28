@@ -33,7 +33,7 @@ export default class ProjectCard extends React.Component {
                     <h4>{name}</h4>
                     <p dangerouslySetInnerHTML={{ __html: sanitiseHtml(short_description).replace(/\n/g, '</p><p>') }} />
                     <a className="btn btn-primary" href={this.projectUrl(name)}>
-                        Case Study <i className=" pl-2 fas fa-chevron-right" />
+                        Case Study &nbsp; <i className="fal fa-angle-right" />
                     </a>
                 </div>
             </div>

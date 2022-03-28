@@ -32,7 +32,7 @@ export default class SiteNav extends React.Component {
                     </div>
 
                     <button className="navbar-toggler p-2" type="button" data-toggle="collapse" data-target="#responsiveNav">
-                        <span><i className="fas fa-bars menu-icon" /></span>
+                        <span><i className="fal fa-bars menu-icon" /></span>
                     </button>
 
                     <div className="collapse navbar-collapse" style={{ whiteSpace: "nowrap" }} id="responsiveNav">
