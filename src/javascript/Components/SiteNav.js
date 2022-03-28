@@ -65,7 +65,7 @@ class NavLink extends React.Component {
 
         if (name == "Download CV") {
             return <a href={href} className="px-3" download>
-                {name}  <i className="far fa-file-download pl-2" />
+                {name}  <i className="fal fa-file-download pl-2" />
             </a>
         } else {
             return <a href={this.buildUrl(href)} className="js-scroll-trigger px-3">

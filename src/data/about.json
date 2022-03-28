@@ -10,11 +10,11 @@
             "href": "https://github.com/MitchellQ"
         },
         {
-            "icon": "far fa-envelope",
+            "icon": "fal fa-envelope",
             "href": "mailto:mitch@mitchellq.dev"
         },
         {
-            "icon": "far fa-file-download",
+            "icon": "fal fa-file-download",
             "href": "/dist/files/Mitch Q CV.pdf"
         }
     ]
