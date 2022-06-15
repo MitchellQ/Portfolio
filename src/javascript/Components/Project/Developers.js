@@ -37,7 +37,7 @@ class DevItem extends React.Component {
                     <a href={dev.linkedin} target="_blank" rel="noopener">
                         <i className="fab fa-github" />
                     </a>
-                    <a className="px-2" href={`https://github.com/${dev.github}`} target="_blank" rel="noopener">
+                    <a className="px-2" href={`${dev.github}`} target="_blank" rel="noopener">
                         <i className="fab fa-linkedin-in" />
                     </a>
                 </div>
