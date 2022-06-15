@@ -31,8 +31,7 @@
             "android": "",
             "apple": ""
         },
-        "developers": [
-            {"name": "Mitchell Quarrie", "github": "https://github.com/mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"},
+        "otherDevelopers": [
             {"name": "Jacques Theron", "github": "https://github.com/Jacques15", "linkedin": "https://www.linkedin.com/in/jacques-theron-407777205/"},
             {"name": "Jono Tew", "github": "https://github.com/jonathanptew", "linkedin": "https://www.linkedin.com/in/jonathanptew/"},
             {"name": "Maria Abastillas", "github": "https://github.com/sempersavii", "linkedin": "https://www.linkedin.com/in/maria-abastillas-dev/"}
@@ -68,8 +67,7 @@
             "android": "https://play.google.com/store/apps/details?id=nz.co.deepcove.discover_deep_cove",
             "apple": ""
         },
-        "developers": [
-            {"name": "Mitchell Quarrie", "github": "https://github.com/mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"},
+        "otherDevelopers": [
             {"name": "Samuel Grant", "github": "https://github.com/samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
             {"name": "Sam Jackson", "github": "https://github.com/jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
         ],
@@ -101,8 +99,7 @@
             "android": "",
             "apple": ""
         },
-        "developers": [
-            {"name": "Mitchell Quarrie", "github": "https://github.com/mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"},
+        "otherDevelopers": [
             {"name": "Samuel Grant", "github": "https://github.com/samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
             {"name": "Sam Jackson", "github": "https://github.com/jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
         ],

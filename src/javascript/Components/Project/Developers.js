@@ -8,7 +8,11 @@ export default class Developers extends React.Component {
                 <h4 className="text-center">Developers</h4>
                 <div className="card dev-profile">
                     <ul className="list-group list-group-flush">
+
+                    <DevItem dev={{"name": "Mitchell Quarrie", "github": "https://github.com/mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"}} />
+
                         {
+                           
                             this.props.developers.map((developer, key) => {
                                 return <DevItem dev={developer} key={key} />
                             })

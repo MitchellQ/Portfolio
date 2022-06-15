@@ -47,7 +47,7 @@ export default class Project extends React.Component {
 
 							<Links urls={project.links} />
 							<Techs frameworks={project.frameworks} />
-							<Developers developers={project.developers} />
+							<Developers developers={project.otherDevelopers} />
 						</div>
 					</div>
 				</div>
