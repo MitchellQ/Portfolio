@@ -30,7 +30,7 @@ class DevItem extends React.Component {
 
         return (
             <li className="list-group-item">
-                <img className="rounded-circle" src={`https://github.com/${dev.github}.png`} alt={`${dev.name}'s profile pic`} />
+                <img className="rounded-circle" src={`${dev.github}.png`} alt={`${dev.name}`} />
                 <span className="ml-2">{dev.name}</span>
 
                 <div className="float-right">
