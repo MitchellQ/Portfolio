@@ -31,7 +31,7 @@ class TechItem extends React.Component {
 		return (
 			<li className="list-group-item">
 				<span>{tech}</span>
-				<img src={`/dist/images/logos/${this.getImgUrl(tech)}.png`} alt={`${tech}'s logo`} />
+				<img src={`/dist/images/frameworkLogos/${this.getImgUrl(tech)}.png`} alt={`${tech}'s logo`} />
 			</li>
 		)
 	}

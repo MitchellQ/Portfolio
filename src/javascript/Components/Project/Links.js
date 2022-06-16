@@ -21,7 +21,7 @@ export default class Links extends React.Component {
 			<a href={android} target="_blank" rel="noopener">
 				<img
 					className="app-badge"
-					src="/dist/images/google play badge.png"
+					src="/dist/images/badges/google play badge.png"
 					alt="Get it on Google Play"
 				/>
 			</a>
@@ -31,7 +31,7 @@ export default class Links extends React.Component {
 			<a href={apple} target="_blank" rel="noopener">
 				<img
 					className="app-badge"
-					src="dist/images/apple app store badge.png"
+					src="dist/images/badges/apple app store badge.png"
 					alt="Get it on the App Store"
 				/>
 			</a>
