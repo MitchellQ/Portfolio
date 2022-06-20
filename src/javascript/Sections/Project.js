@@ -2,12 +2,12 @@ import React from "react";
 
 import { sanitiseHtml } from "../functions";
 
-import Techs from '../Components/Project/Techs.js';
+import Techs from '../Components/Project/Techs';
 import Developers from '../Components/Project/Developers';
 import ProjectImage from '../Components/Project/ProjectImage';
 import Links from '../Components/Project/Links';
 
-import HtmlComment from '../Components/HtmlComment.js'
+import HtmlComment from '../Components/HtmlComment'
 
 export default class Project extends React.Component {
 	constructor(props) {
