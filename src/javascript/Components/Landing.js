@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Modal from '../Components/Project/Modal';
 import { sanitiseHtml } from '../functions';
 
 export default class Landing extends React.Component {
@@ -9,8 +9,13 @@ export default class Landing extends React.Component {
         this.state = require('../../data/landing.json');
     }
 
+    setShow(show){
+        setState({show:show});
+    }
+
     render() {
         const { greeting, message } = this.state;
+        const show = true;
 
         let message_html = sanitiseHtml(message).replace(/\n/g, '</p><p>');
 
@@ -22,9 +27,12 @@ export default class Landing extends React.Component {
                         <div className="col-md-8 mt-lg-5 text-center">
                             <h1 className="aos-init aos-animate" data-aos="fade-up">{greeting}</h1>
                             <p className="mb-5 desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" dangerouslySetInnerHTML={{ __html: message_html }} />
-                            <div data-aos="fade-up" data-aos-delay="100" className="aos-init aos-animate">
+                            {/* <div data-aos="fade-up" data-aos-delay="100" className="aos-init aos-animate">
                                 <a href="#contact" className="btn js-scroll-trigger btn-primary mr-2 mb-2">Get In Touch</a>
-                            </div>
+                            </div> */}
+
+                            <button onClick={() => setShow(true)}>Show modal</button>
+                            <Modal show={show}/>
                         </div>
                     </div>
                 </div>
