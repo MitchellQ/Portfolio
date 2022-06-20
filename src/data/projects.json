@@ -1,13 +1,57 @@
 [
     {
+        "name": "Revived Design",
+        "images": [
+            {
+                "src": "/dist/images/projects/revived/revived-design-landing.jpg",
+                "caption": "Revived Design Landing"
+            },
+            {
+                "src": "/dist/images/projects/revived/revived-design-recipe-gallery.png",
+                "caption": "Revived Design Recipe Gallery"
+            },
+            {
+                "src": "/dist/images/projects/revived/revived-design-recipe-page.png",
+                "caption": "Revived Design Recipe Page"
+            },
+            {
+                "src": "/dist/images/projects/revived/revived-design-footer.png",
+                "caption": "Revived Design Footer"
+            }
+        ],
+        "featuredProject": true,
+        "frameworks": [
+            "Flutter",
+            "Dart", 
+            "Github",
+            "Firebase"
+        ],
+        "links": {
+            "website": "",
+            "android": "",
+            "apple": ""
+        },
+        "otherDevelopers": [
+            {"name": "Jacques Theron", "github": "https://github.com/Jacques15", "linkedin": "https://www.linkedin.com/in/jacques-theron-407777205/"},
+            {"name": "Jono Tew", "github": "https://github.com/jonathanptew", "linkedin": "https://www.linkedin.com/in/jonathanptew/"},
+            {"name": "Maria Abastillas", "github": "https://github.com/sempersavii", "linkedin": "https://www.linkedin.com/in/maria-abastillas-dev/"}
+        ],
+        "client": "Revived Design",
+        "clientLogo": "/dist/images/projects/revived/revived-design-logo.png",
+        "aboutClient": "The Revived Design project aims to make a digital platform that helps designers/makers earn money from selling the designs/recipes that they have created that transform or re-purpose waste or end-of-life materials into new marketable products. The success of the platform will promote creative, sustainable businesses that protect the earth.",
+        "short_description": "A web application built in Flutter for Revived Design. A market place for creators to create & sell 'design recipes' that take waste materials and give it a new purpose",
+        "description": "This internship was completed as part of my Mission Ready HQ accelerator, my fellow intern and I worked under the supervision of our Mentor Jacques to create sections of the site based off the Figma and bring other areas in line with the design, help to resolve many issues from previous internships.\nMy contributions included bringing several screens in line with the Figma design sometimes by updating existing widgets and sometimes by creating brand new widgets. I implemented functionality into the navbar to detect an authorized user and switch the nav bar from its unauthorized state to its authorized state. I created coding conventions for the repo using Architectural Design Records to make the code base, file names and importing structure consistent. Started using the GitHub wiki (creating guides on the emulator data and other common issues) and updated the readme to make it effort easier for new developers to get started. I helped set up and assisted in making our code compliant with linting standards.\nI created a new view/ user flow based off the Figma design - the recipe gallery section. This involved building the view from the ground up using hardcoded data and finally dummy data using the firebase emulator dataset that I created, I created many new widgets while trying to keep the widget tree clean and easy to understand and was able to sort out a simple filtering of the data."
+    },
+
+    {
         "name": "Discover Deep Cove",
         "images": [
             {
-                "src": "/dist/images/deepcove-mobile.jpg",
-                "caption": "Discover Deep Cove Andriod Application"
+                "src": "/dist/images/projects/deep-cove/deep-cove-mobile.jpg",
+                "caption": "Discover Deep Cove Android Application"
             },
             {
-                "src": "/dist/images/deepcove-web.jpg",
+                "src": "/dist/images/projects/deep-cove/deep-cove-web.jpg",
                 "caption": "Deep Cove Hostel Site"
             }
         ],
@@ -23,14 +67,13 @@
             "android": "https://play.google.com/store/apps/details?id=nz.co.deepcove.discover_deep_cove",
             "apple": ""
         },
-        "developers": [
-            {"name": "Mitchell Quarrie", "github": "mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"},
-            {"name": "Samuel Grant", "github": "samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
-            {"name": "Sam Jackson", "github": "jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
+        "otherDevelopers": [
+            {"name": "Samuel Grant", "github": "https://github.com/samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
+            {"name": "Sam Jackson", "github": "https://github.com/jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
         ],
         "client": "Deep Cove Outdoor Education Trust",
-        "clientLogo": "/dist/images/deepcove-logo.png",
-        "aboutClient": "The Deep Cove Outdoor Education Trust is a non-profit organisation established in 1971 to help promote and educate tourists and school aged children on the importance of conservation and environmentally friendly practices in the remote Fiorland National Park.",
+        "clientLogo": "/dist/images/projects/deep-cove/deep-cove-logo.png",
+        "aboutClient": "The Deep Cove Outdoor Education Trust is a non-profit organisation established in 1971 to help promote and educate tourists and school aged children on the importance of conservation and environmentally friendly practices in the remote Fiordland National Park.",
         "short_description": "A bespoke Android and Web Application and CMS for the Deep Cove Outdoor Education Trust that takes a modern approach to educating tourists and students on school camps.\nThe Discover Deep Cove application includes a map of Deep Cove, track activities, an interactive quiz and glossary of local flora and fauna. The website includes a content management system to manage the website and mobile application.",
         "description": "This was the capstone project for my Bachelor of Information Technology in coordination with two other students. Our team developed a bespoke Android and Web Application for the Deep Cove Outdoor Education Trust that not only replaced two out of date websites operated by the Trust, but also introduced a more interactive learning experience for school children and tourists alike.\nThis application, Discover Deep Cove, can be downloaded by clicking on Play Store badge. Features include a knowledge base with photos and sound clips to help identify wildlife, quizzes, and an interactive map with activities linked to QR codes in the area.\nMy role as Lead Mobile Application Developer, meant that I oversaw building the mobile application. My main area was developing and building the UI and UX in our chosen framework 'Flutter'"
     },
@@ -39,7 +82,7 @@
         "name": "Fight for Kidz",
         "images": [
             {
-                "src": "/dist/images/f4k-landing.jpg",
+                "src": "/dist/images/projects/f4k/f4k-landing.jpg",
                 "caption": "Fight for Kidz landing page"
             }
         ],
@@ -56,15 +99,14 @@
             "android": "",
             "apple": ""
         },
-        "developers": [
-            {"name": "Mitchell Quarrie", "github": "mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"},
-            {"name": "Samuel Grant", "github": "samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
-            {"name": "Sam Jackson", "github": "jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
+        "otherDevelopers": [
+            {"name": "Samuel Grant", "github": "https://github.com/samuelgrant", "linkedin": "https://www.linkedin.com/in/samueljegrant/"},
+            {"name": "Sam Jackson", "github": "https://github.com/jacksos101", "linkedin": "https://www.linkedin.com/in/sam-jackson-285002169/"}
         ],
         "client": "Fight for Kidz",
-        "clientLogo": "/dist/images/f4k-logo.png",
+        "clientLogo": "/dist/images/projects/f4k/f4k-logo.png",
         "aboutClient": "Fight for Kidz is a charity boxing event held in Southland raising funds for kid's charities. All funds raised stay in Southland. This event has been running since 2003 and raised almost $700,000.",
-        "short_description": "A web application and CMS built for the Fight for Kidz organization with the goal of becoming the main point of contact between the orgainzers and fighter, sponsors etc. This previously had been accomplished using the organizations Facebook page\nThe Website displays information on upcoming and historic events has videos of each bout, there is a multipurpose contact form based on the type of enquiry selected i.e. sponsorships. Finally, there is a partially dynamic Fighter application form (that can be five custom questions).",
-        "description": "This was a second-year collaborative work with a team of four students to develop a web application for Fight for Kidz, a non-profit organisation that runs charity boxing events in Invercargill, fundraising for charities that work with our most vulnerable children.\nThe website features a content management system that allows Fight for Kidz to manage applications for each event, helping them streamline their processes and publicise their events.\nMy role as a Junior Web Developer led to me working in part on various aspects of the website, including but not limited to design, responsiveness, back end and CMS."
+        "short_description": "A web application and CMS built for the Fight for Kidz organization with the goal of becoming the main point of contact between the organizers and fighter, sponsors etc. This previously had been accomplished using the organizations Facebook page\nThe Website displays information on upcoming and historic events has videos of each bout, there is a multipurpose contact form based on the type of enquiry selected i.e. sponsorships. Finally, there is a partially dynamic Fighter application form (that can be five custom questions).",
+        "description": "This was a second-year collaborative work with a team of four students to develop a web application for Fight for Kidz, a non-profit organisation that runs charity boxing events in Invercargill, fundraising for charities that work with our most vulnerable children.\nThe website features a content management system that allows Fight for Kidz to manage applications for each event, helping them streamline their processes and publicize their events.\nMy role as a Junior Web Developer led to me working in part on various aspects of the website, including but not limited to design, responsiveness, back end and CMS."
     }
 ]

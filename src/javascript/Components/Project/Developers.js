@@ -8,7 +8,11 @@ export default class Developers extends React.Component {
                 <h4 className="text-center">Developers</h4>
                 <div className="card dev-profile">
                     <ul className="list-group list-group-flush">
+
+                    <DevItem dev={{"name": "Mitchell Quarrie", "github": "https://github.com/mitchellq", "linkedin": "https://www.linkedin.com/in/mitchellq/"}} />
+
                         {
+                           
                             this.props.developers.map((developer, key) => {
                                 return <DevItem dev={developer} key={key} />
                             })
@@ -30,14 +34,14 @@ class DevItem extends React.Component {
 
         return (
             <li className="list-group-item">
-                <img className="rounded-circle" src={`https://github.com/${dev.github}.png`} alt={`${dev.name}'s profile pic`} />
+                <img className="rounded-circle" src={`${dev.github}.png`} alt={`${dev.name}`} />
                 <span className="ml-2">{dev.name}</span>
 
                 <div className="float-right">
                     <a href={dev.linkedin} target="_blank" rel="noopener">
                         <i className="fab fa-github" />
                     </a>
-                    <a className="px-2" href={`https://github.com/${dev.github}`} target="_blank" rel="noopener">
+                    <a className="px-2" href={`${dev.github}`} target="_blank" rel="noopener">
                         <i className="fab fa-linkedin-in" />
                     </a>
                 </div>
