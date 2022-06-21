@@ -8,11 +8,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    display: none;
+    transition: .3s all ease-in-out;
+    pointer-events: none;
+}
+
+.modal-thumbnail:hover {
+    cursor: pointer;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: visible;
+    display: inline-flex;
+}
+
+.modal-image{
+    width: 1000px;
+    object-fit: contain;
 }
 
 .modal-content {
-    width: 500px;
+    width: 1020px;
     background-color: #fff;
+    transform: translateY(-200px);
+    transition: .3s all ease-in-out;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
 }
 
 .modal-header, .modal-footer {
