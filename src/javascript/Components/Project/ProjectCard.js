@@ -20,10 +20,10 @@ export default class ProjectCard extends React.Component {
 
                 <div className="col-md-2 col-sm-12 controls">
                     <div className="btn-group btn-group-sm" role="group">
-                        <button className="btn btn-primary" onClick={() => this.props.next()}>
+                        <button className="btn btn-primary" onClick={() => this.props.previous()}>
                             <i className="fal fa-angle-double-left" />
                         </button>
-                        <button className="btn btn-primary" onClick={() => this.props.previous()}>
+                        <button className="btn btn-primary" onClick={() => this.props.next()}>
                             <i className="fal fa-angle-double-right" />
                         </button>
                     </div>
