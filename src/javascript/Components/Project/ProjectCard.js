@@ -15,7 +15,9 @@ export default class ProjectCard extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-5 col-sm-12 pr-4">
-                    <img className="img-fluid" style={{ height: "200px" }} src={images[0].src} alt={images[0].caption} />
+                    <a href={this.projectUrl(name)}>
+                        <img className="img-fluid" style={{ height: "200px" }} src={images[0].src} alt={images[0].caption} />
+                    </a>
                 </div>
 
                 <div className="col-md-2 col-sm-12 controls">
