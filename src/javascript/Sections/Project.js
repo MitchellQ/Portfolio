@@ -2,12 +2,13 @@ import React from "react";
 
 import { sanitiseHtml } from "../functions";
 
-import Techs from '../Components/Project/Techs.js';
+import Techs from '../Components/Project/Techs';
 import Developers from '../Components/Project/Developers';
 import ProjectImage from '../Components/Project/ProjectImage';
 import Links from '../Components/Project/Links';
+import Modal from '../Components/Project/Modal';
 
-import HtmlComment from '../Components/HtmlComment.js'
+import HtmlComment from '../Components/HtmlComment'
 
 export default class Project extends React.Component {
 	constructor(props) {
@@ -15,10 +16,29 @@ export default class Project extends React.Component {
 
 		this.state = {
 			project: require("../../data/projects.json"),
+			projectImages: [],
+			show: false,
+			modalTitle: '',
+			modalImage: ''
 		};
+
+		this.setShow = this.setShow.bind(this);
+	}
+
+	setShow(i, image) {
+		this.setState({ show: i });
+
+		if (image === undefined) return;
+
+		this.setState({
+			modalTitle: image.caption,
+			modalImage: image.src
+		});
 	}
 
 	render() {
+		const { show } = this.state;
+
 		if (!this.state.project) return null;
 
 		const project = this.state.project.filter((project) => {
@@ -26,11 +46,15 @@ export default class Project extends React.Component {
 		})[0];
 
 		const projectImages = project.images.map((image, key) => {
-			return <ProjectImage src={image.src} caption={image.caption} key={key} />;
+			return <ProjectImage src={image.src} caption={image.caption} key={key} onClick={() => this.setShow(true, image)} />;
 		});
 
 		return (
 			<section className="site-section">
+				<Modal title={this.state.modalTitle} onClose={() => this.setShow(false)} show={show}>
+					<img className="modal-image" src={this.state.modalImage} alt="Modal Image" />
+				</Modal>
+
 				<div className="container">
 					<div className="row mt-5">
 						<div className="col-md-8 blog-content">

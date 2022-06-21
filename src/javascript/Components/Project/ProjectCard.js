@@ -15,15 +15,17 @@ export default class ProjectCard extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-5 col-sm-12 pr-4">
-                    <img className="img-fluid" style={{ height: "200px" }} src={images[0].src} alt={images[0].caption} />
+                    <a href={this.projectUrl(name)}>
+                        <img className="img-fluid" style={{ height: "200px" }} src={images[0].src} alt={images[0].caption} />
+                    </a>
                 </div>
 
                 <div className="col-md-2 col-sm-12 controls">
                     <div className="btn-group btn-group-sm" role="group">
-                        <button className="btn btn-primary" onClick={() => this.props.next()}>
+                        <button className="btn btn-primary" onClick={() => this.props.previous()}>
                             <i className="fal fa-angle-double-left" />
                         </button>
-                        <button className="btn btn-primary" onClick={() => this.props.previous()}>
+                        <button className="btn btn-primary" onClick={() => this.props.next()}>
                             <i className="fal fa-angle-double-right" />
                         </button>
                     </div>

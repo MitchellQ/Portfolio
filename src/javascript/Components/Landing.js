@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { sanitiseHtml } from '../functions';
 
 export default class Landing extends React.Component {
@@ -7,6 +6,10 @@ export default class Landing extends React.Component {
         super(props);
 
         this.state = require('../../data/landing.json');
+    }
+
+    setShow(show) {
+        setState({ show: show });
     }
 
     render() {
@@ -24,7 +27,7 @@ export default class Landing extends React.Component {
                             <p className="mb-5 desc aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" dangerouslySetInnerHTML={{ __html: message_html }} />
                             <div data-aos="fade-up" data-aos-delay="100" className="aos-init aos-animate">
                                 <a href="#contact" className="btn js-scroll-trigger btn-primary mr-2 mb-2">Get In Touch</a>
-                            </div>
+                            </div>                           
                         </div>
                     </div>
                 </div>
