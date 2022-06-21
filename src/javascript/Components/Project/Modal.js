@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const Modal = props => {
 
     const closeOnEscapeKeyDown = (e) => {
-        if((e.charCode || e.keyCode) === 27) {
+        if ((e.charCode || e.keyCode) === 27) {
             props.onClose()
         }
     }
@@ -17,7 +17,7 @@ const Modal = props => {
     }, [])
 
     return (
-        <div className={`modal ${props.show? 'show' : ''}`} onClick={props.onClose}>
+        <div className={`modal ${props.show ? 'show' : ''}`} onClick={props.onClose}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <div className="modal-header">
                     <h4 className="modal-title">{props.title}</h4>

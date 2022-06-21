@@ -18,7 +18,7 @@ export default class Project extends React.Component {
 			project: require("../../data/projects.json"),
 			projectImages: [],
 			show: false,
-			modalTitle: '',			
+			modalTitle: '',
 			modalImage: ''
 		};
 
@@ -26,9 +26,9 @@ export default class Project extends React.Component {
 	}
 
 	setShow(i, image) {
-		this.setState({show: i});
+		this.setState({ show: i });
 
-		if(image === undefined) return;
+		if (image === undefined) return;
 
 		this.setState({
 			modalTitle: image.caption,
@@ -46,15 +46,15 @@ export default class Project extends React.Component {
 		})[0];
 
 		const projectImages = project.images.map((image, key) => {
-			return <ProjectImage src={image.src} caption={image.caption} key={key} onClick={() => this.setShow(true, image)}/>;
+			return <ProjectImage src={image.src} caption={image.caption} key={key} onClick={() => this.setShow(true, image)} />;
 		});
 
 		return (
 			<section className="site-section">
 				<Modal title={this.state.modalTitle} onClose={() => this.setShow(false)} show={show}>
-					<img className="modal-image" src={this.state.modalImage} alt="Modal Image"/>
+					<img className="modal-image" src={this.state.modalImage} alt="Modal Image" />
 				</Modal>
-				
+
 				<div className="container">
 					<div className="row mt-5">
 						<div className="col-md-8 blog-content">
