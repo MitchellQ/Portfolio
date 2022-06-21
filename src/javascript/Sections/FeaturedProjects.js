@@ -18,7 +18,7 @@ export default class ProjectCards extends React.Component {
 	componentDidMount() {
 		this.autoplay = setInterval(() => {
 			this.setIndex(this.state.index + 1)
-		}, 20 * 1000);
+		}, 5 * 1000);
 	}
 
 	// Clean resources when we kill this component
@@ -35,7 +35,7 @@ export default class ProjectCards extends React.Component {
 		clearInterval(this.autoplay)
 		this.autoplay = setInterval(() => {
 			this.setIndex(this.state.index + 1)
-		}, 20 * 1000);
+		}, 5 * 1000);
 	}
 
 	// Adjust the index
